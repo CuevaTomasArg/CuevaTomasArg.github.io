@@ -1,0 +1,561 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,700&display=swap");
+body {
+  background-color: #0B0217;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: #F1E7FF;
+  font-family: "Roboto", "Quicksand", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica;
+}
+
+h1 {
+  color: #9D86DF;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header nav {
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 64px;
+}
+header nav img {
+  height: 250%;
+  margin-left: 64px;
+  margin-right: auto;
+}
+header nav ul {
+  display: flex;
+  margin: auto 64px auto auto;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header nav ul li {
+  display: inline-block;
+  margin: 24px 24px 0px;
+  font-size: 1rem;
+}
+header nav ul li a {
+  display: inline;
+  font-family: "Roboto", "Quicksand", sans-serif;
+  color: #F1E7FF;
+  text-decoration: underline;
+}
+header nav ul li a button {
+  font-size: 1rem;
+  background-color: #3A2C5E;
+  border: 1px solid #F1E7FF;
+  border-radius: 6px;
+  width: 128px;
+  height: 52px;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 400;
+  color: #F1E7FF;
+}
+
+main {
+  margin: 128px 0px;
+  width: 90%;
+}
+main section:first-child {
+  display: flex;
+  margin: 64px auto 256px auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+}
+main section:first-child h1 {
+  font-size: 3rem;
+}
+main section:first-child h2 {
+  color: #7563AA;
+  font-size: 2.5rem;
+}
+main section:first-child p {
+  font-size: 1.6rem;
+  color: #eddfff;
+}
+main section:first-child p, main section:first-child h1, main section:first-child h2 {
+  margin: 4px 0px;
+}
+main section:first-child h1, main section:first-child h2 {
+  padding-left: 16px;
+}
+main section:first-child p:last-child {
+  padding-left: 12px;
+  padding-top: 2px;
+}
+main section:nth-child(2) h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #F1E7FF;
+}
+main section:nth-child(2) h2 span {
+  margin-left: 20%;
+}
+main section:nth-child(2) h2 hr {
+  width: 60%;
+  margin: auto 32px;
+  display: inline-block;
+}
+main section:nth-child(2) p {
+  width: 55%;
+  font-size: 1.2rem;
+  margin: 38px auto;
+  padding-left: 126px;
+  color: #eddfff;
+  line-height: 30px;
+}
+main section:nth-child(2) ul {
+  list-style-type: none;
+}
+main section:nth-child(2) ul li {
+  color: #eddfff;
+}
+main section:nth-child(2) ul li p i {
+  margin: auto 8px;
+  height: 12px;
+}
+main section:nth-child(2) p:last-child span {
+  display: inline-block;
+  margin: auto 32px 0px auto;
+  color: rgba(241, 231, 255, 0.25);
+}
+main section:nth-child(2) p:last-child button {
+  margin-top: 128px;
+  font-size: 1rem;
+  background-color: #3A2C5E;
+  border: 1px solid #F1E7FF;
+  border-radius: 6px;
+  width: 70%;
+  height: 52px;
+  padding: 0;
+  font-family: "Roboto Flex", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  color: #F1E7FF;
+}
+main section:nth-child(3) h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #F1E7FF;
+}
+main section:nth-child(3) h2 span {
+  margin-left: 20%;
+}
+main section:nth-child(3) h2 hr {
+  width: 60%;
+  margin: auto 32px;
+  display: inline-block;
+}
+main section:nth-child(3) .card.caixa-conteudo-ativo {
+  z-index: 1;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s, width 0.7s 0.7s, z-index 0s;
+}
+main section:nth-child(3) .card.caixa-conteudo-ativo .componente-fondo-imagen {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s;
+}
+main section:nth-child(3) .card.caixa-conteudo-ativo .componente-fondo-imagen::before {
+  transition-delay: 0.6s;
+  transform: scale(1.1);
+}
+main section:nth-child(3) > .contenido-general.caixa--componente-ativo .componente-fondo-imagen {
+  width: calc(100vw - 140px);
+}
+main section:nth-child(3) > .contenido-general.caixa--componente-ativo .componente-visual-inicial {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s;
+}
+main section:nth-child(3) > .contenido-general.js-conteudo-geral > .componente-visual-inicial {
+  opacity: 0;
+  transform: translateY(10px);
+}
+main section:nth-child(3) > .contenido-general.js-conteudo-geral > .componente-fondo-imagen::before {
+  transform: translate3d(0, -100%, 0) scale(1.2);
+}
+main section:nth-child(3) > .contenido-general {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  padding: 80px 70px;
+}
+main section:nth-child(3) > .contenido-general > .componente-interno-general {
+  position: relative;
+  height: 100%;
+}
+main section:nth-child(3) > .contenido-general > .componente-interno-general:hover {
+  opacity: 1;
+}
+main section:nth-child(3) > .contenido-general > .componente-interno-general:hover .componente-fondo-imagen::after {
+  opacity: 1;
+}
+main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .componente-fondo-imagen::before {
+  transition: transform 0.8s;
+}
+main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .componente-fondo-imagen::after {
+  transition: opacity 0.5s 1.4s;
+  opacity: 1 !important;
+}
+main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo > .componente-index {
+  transition: transform 0.5s, opacity 0.3s;
+  opacity: 0;
+}
+main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body {
+  z-index: 2;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.5s 1.4s;
+}
+main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body .componente-boton-cerrar {
+  z-index: 5;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0s 1.4s;
+}
+main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body .componente-boton-cerrar::before, main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body .componente-boton-cerrar::after {
+  opacity: 1;
+}
+main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body .componente-boton-cerrar::before {
+  transition: all 0.3s 1.4s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+  transform: rotate(45deg) translateX(0);
+}
+main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body .componente-boton-cerrar::after {
+  transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+  transform: rotate(-45deg) translateX(0);
+}
+main section:nth-child(3) .card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 19.2%;
+  height: 100%;
+  background: #252525;
+  transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s;
+  will-change: transform, width, opacity;
+}
+main section:nth-child(3) .card:not(.caixa-conteudo-ativo) {
+  cursor: pointer;
+}
+main section:nth-child(3) .card > .componente-interno {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+main section:nth-child(3) .card > .componente-interno > .componente {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  transition: transform 1s;
+  transform: translate3d(0, 100%, 0);
+}
+main section:nth-child(3) .card .componente-fondo-imagen {
+  position: relative;
+  height: 100%;
+  transition: transform 0.6s 0.7s;
+  will-change: transform;
+}
+main section:nth-child(3) .card .componente-fondo-imagen::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -5%;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: center center;
+  transition: transform 1s;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+main section:nth-child(3) .card .componente-fondo-imagen::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+main section:nth-child(3) .card .componente-visual-inicial {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s 1.2s;
+}
+main section:nth-child(3) .card .componente-visual-inicial > strong {
+  color: #F1E7FF;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+main section:nth-child(3) .card .body {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.1s;
+}
+main section:nth-child(3) .card .body > button {
+  margin: 12px;
+  background-color: transparent;
+  border: 2px solid #F1E7FF;
+  border-radius: 24px;
+  color: #F1E7FF;
+  display: inline-block;
+  width: fit-content;
+}
+main section:nth-child(3) .card .body > button span {
+  display: inline-block;
+  padding: 6px;
+  font-size: 1.2rem;
+}
+main section:nth-child(3) .card .body .componente-boton-cerrar {
+  z-index: -1;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0s 0.45s;
+  cursor: pointer;
+}
+main section:nth-child(3) .card .body .componente-boton-cerrar::before {
+  transform: rotate(45deg) translateX(100%);
+}
+main section:nth-child(3) .card .body .componente-boton-cerrar::after {
+  transform: rotate(-45deg) translateX(100%);
+}
+main section:nth-child(3) .card .body .componente-boton-cerrar::before, main section:nth-child(3) .card .body .componente-boton-cerrar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 8px;
+  margin-top: -4px;
+  background: #F1E7FF;
+  opacity: 0;
+  transition: opacity 0s;
+}
+main section:nth-child(3) .card .body h3 {
+  color: #7563AA;
+  font-size: 2rem;
+}
+main section:nth-child(3) .card .body p {
+  font-size: 1.2rem;
+  color: #eddfff;
+}
+main section:nth-child(3) .card .body div, main section:nth-child(3) .card .body .card-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+main section:nth-child(3) .card .body .card-footer li {
+  width: 42px;
+  height: 42px;
+  margin: auto 8px;
+}
+main section:nth-child(3) .card .body .card-footer li a {
+  font-size: 28px;
+  text-align: center;
+}
+main section:nth-child(3) .card .body .card-footer li a span {
+  border-radius: 50%;
+  color: #7563AA;
+  border: 3px solid #7563AA;
+  transition: all 0.5s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section:nth-child(3) .card .body .card-footer li a .bi-github:hover {
+  color: rgb(234, 234, 234);
+  border-color: rgb(234, 234, 234);
+}
+main section:nth-child(3) .card .body .card-footer li a .bi-laptop:hover {
+  color: #afa5ce;
+  border-color: #afa5ce;
+}
+main section:nth-child(3) .card .body .card-footer li a .bi-diagram-3:hover {
+  color: rgb(119, 67, 67);
+  border-color: rgb(119, 67, 67);
+}
+main section:nth-child(3) .card .componente-index {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  text-align: center;
+  font-size: 20vw;
+  line-height: 0.85;
+  font-weight: bold;
+  transition: transform 0.5s, opacity 0.3s 1.4s;
+  transform: translate3d(0, 1vw, 0);
+}
+main section:nth-child(3) .card .componente-index .componente-index-back, main section:nth-child(3) .card .componente-index .componente-index-front {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+main section:nth-child(3) .card .componente-index .componente-index-back {
+  color: #2f3840;
+  opacity: 0;
+  transition: opacity 0.25s 0.25s;
+}
+main section:nth-child(3) .card .componente-index .componente-index-front .componente-index-overlay {
+  overflow: hidden;
+  position: relative;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.5s 0.1s;
+  color: transparent;
+}
+main section:nth-child(3) .card .componente-index .componente-index-front .componente-index-overlay::before {
+  content: attr(data-index);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.5s 0.1s;
+}
+main section:nth-child(3) .card:hover .componente-index {
+  transform: translate3d(0, 0, 0);
+}
+main section:nth-child(3) .card:hover .componente-index .componente-index-back {
+  transition: opacity 0.25s;
+  opacity: 1;
+}
+main section:nth-child(3) .card:hover .componente-index .componente-index-front .componente-index-overlay {
+  transform: translate3d(0, 0, 0);
+}
+main section:nth-child(3) .card:hover .componente-index .componente-index-front .componente-index-overlay::before {
+  transform: translate3d(0, 0, 0);
+}
+main section:nth-child(3) .componente-boton-cerrar::before, main section:nth-child(3) .componente-boton-cerrar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 8px;
+  margin-top: -4px;
+  background: #F1E7FF;
+  opacity: 0;
+  transition: opacity 0s;
+}
+main section:nth-child(3) .componente-boton-cerrar::before {
+  transform: rotate(45deg) translateX(100%);
+}
+main section:nth-child(3) .componente-boton-cerrar::after {
+  transform: rotate(-45deg) translateX(100%);
+}
+
+.contenido-general.caixa--componente-ativo .card:nth-child(1):not(.caixa-conteudo-ativo) {
+  transform: scale(0.5) translate3d(0%, 0, 0);
+  opacity: 0;
+  transition: transform 0.95s, opacity 0.95s;
+}
+
+.card:nth-child(1) {
+  transform: translate3d(0%, 0, 0);
+  transform-origin: 50%, 50%;
+}
+.card:nth-child(1) .componente-interno {
+  transition-delay: 0ss;
+}
+.card:nth-child(1) .componente-interno .componente-fondo-imagen {
+  transform: translate3d(0%, 0, 0);
+}
+.card:nth-child(1) .componente-interno .componente-fondo-imagen::before {
+  transition-delay: 0;
+  background-image: url("../../multimedia/Freaks3DPersoDestkop.png");
+}
+
+.contenido-general.caixa--componente-ativo .card:nth-child(2):not(.caixa-conteudo-ativo) {
+  transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+  opacity: 0;
+  transition: transform 0.95s, opacity 0.95s;
+}
+
+.card:nth-child(2) {
+  transform: translate3d(105.2083333333%, 0, 0);
+  transform-origin: 155.2083333333%, 50%;
+}
+.card:nth-child(2) .componente-interno {
+  transition-delay: 0.1ss;
+}
+.card:nth-child(2) .componente-interno .componente-fondo-imagen {
+  transform: translate3d(0%, 0, 0);
+}
+.card:nth-child(2) .componente-interno .componente-fondo-imagen::before {
+  transition-delay: 0;
+  background-image: url("../../multimedia/LandingQualityDestkop.png");
+}
+
+.contenido-general.caixa--componente-ativo .card:nth-child(3):not(.caixa-conteudo-ativo) {
+  transform: scale(0.5) translate3d(210.4166666667%, 0, 0);
+  opacity: 0;
+  transition: transform 0.95s, opacity 0.95s;
+}
+
+.card:nth-child(3) {
+  transform: translate3d(210.4166666667%, 0, 0);
+  transform-origin: 260.4166666667%, 50%;
+}
+.card:nth-child(3) .componente-interno {
+  transition-delay: 0.2ss;
+}
+.card:nth-child(3) .componente-interno .componente-fondo-imagen {
+  transform: translate3d(0%, 0, 0);
+}
+.card:nth-child(3) .componente-interno .componente-fondo-imagen::before {
+  transition-delay: 0;
+  background-image: url("../../multimedia/LandingQualityDestkopx.png");
+}
+
+.card:hover .componente-fondo-imagen::after {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
