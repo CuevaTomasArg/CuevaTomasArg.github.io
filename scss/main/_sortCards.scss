@@ -1,41 +1,76 @@
 
 $distance:105.20833333333%;
 $transform-origin:50%;
-$images:"../../multimedia/Freaks3DPersoDestkop.png","../../multimedia/LandingQualityDestkop.png","../../multimedia/LandingQualityDestkopx.png";
+$images:"../multimedia/Freaks3DPersoDestkop.png","../multimedia/LandingQualityDestkop.png","../multimedia/LandingQualityDestkopx.png","../multimedia/Freaks3DPersoDestkop.png","../multimedia/Freaks3DPersoDestkop.png";
 $base-delay:0s;
 
 
-@for $i from 1 through 3{
-    .contenido-general.caixa--componente-ativo{
-        .card:nth-child(#{$i}):not(.caixa-conteudo-ativo){
-            transform: scale(0.5) translate3d(#{($i - 1)*$distance}, 0, 0);
-            opacity: 0;
-            transition: transform 0.95s, opacity 0.95s;
+ @for $i from 1 through 5{
+    .conteudo-geral.caixa--componente-ativo .componente:nth-child(2):not(.caixa-conteudo-ativo) {
+    transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+    opacity: 0;
+    transition: transform 0.95s, opacity 0.95s;
     }
-}
-    .card:nth-child(#{$i}){
-        transform: translate3d(#{($i - 1)*$distance} ,0,0);
-        transform-origin: #{($i - 1)*$distance+$transform-origin},50%;
+    .componente:nth-child(#{$i}){
+        transform: translate3d(#{($i - 1)*$distance},0,0);
         .componente-interno{
-            @for $j from 0 to $i - 1 {
-                $base-delay:$base-delay + 0.1;
-            }
-            transition-delay:#{$base-delay}s  ;
-            $base-delay:0;
-            .componente-fondo-imagen{
-                transform:translate3d(0%,0,0);
-                &::before{
-                    transition-delay:#{$base-delay};
-                    background-image:  url(nth($images,$i)) ;
-                }
+            transition-delay:$base-delay ;
+        }
+        .componente-fundo-imagem{
+            &::before{
+                transition-delay: $base-delay;
+                background-image: url(nth($images,$i));
             }
         }
-    }
-    $base-delay:$base-delay + 0.1;
-}
 
-.card:hover{
-    .componente-fondo-imagen::after{
-        opacity: 0;
     }
+    $base-delay:$base-delay + 1;
 }
+.componente.caixa-conteudo-ativo {
+    z-index: 1;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.6s, width 0.7s 0.7s, z-index 0s;
+  }
+  .componente.caixa-conteudo-ativo .componente-fundo-imagem {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.6s;
+  }
+  .componente.caixa-conteudo-ativo .componente-fundo-imagem:before {
+    transition-delay: 0.6s;
+    transform: scale(1.1);
+  }
+
+//     .conteudo-geral.caixa--componente-ativo{
+//         .componente:nth-child(#{$i}):not(.caixa-conteudo-ativo){
+//             transform: scale(0.5) translate3d(#{($i - 1)*$distance}, 0, 0);
+//             opacity: 0;
+//             transition: transform 0.95s, opacity 0.95s;
+//     }
+// }
+//     .componente:nth-child(#{$i}){
+//         transform: translate3d(#{($i - 1)*$distance} ,0,0);
+//         transform-origin: #{($i - 1)*$distance+$transform-origin},50%;
+//         .componente-interno{
+//             @for $j from 0 to $i - 1 {
+//                 $base-delay:$base-delay + 0.1;
+//             }
+//             transition-delay:#{$base-delay}  ;
+            
+//             .componente-fundo-imagen:before{
+//                 transform:translate3d(0%,0,0);
+//                 &::before{
+//                     transition-delay:#{$base-delay};
+//                     background-image:  url(nth($images,$i)) ;
+//                 }
+//             }
+//         }
+//     }
+//     $base-delay:$base-delay + 0.1;
+// }
+
+// .componente:hover{
+//     .componente-fundo-imagen:before:{
+//         opacity: 0;
+//     }
+// }

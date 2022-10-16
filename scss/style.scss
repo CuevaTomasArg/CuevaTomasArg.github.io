@@ -1,4 +1,11 @@
 @import "base/vars";
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body{
     background-color: $fondo;
@@ -21,4 +28,5 @@ ul{
 }
 
 @import "main/header";
-@import "main/main"
+@import "main/main";
+@import "main/projects";

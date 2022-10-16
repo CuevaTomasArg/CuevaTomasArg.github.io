@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,700&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #0B0217;
 }
@@ -162,86 +170,116 @@ main section:nth-child(3) h2 hr {
   margin: auto 32px;
   display: inline-block;
 }
-main section:nth-child(3) .card.caixa-conteudo-ativo {
-  z-index: 1;
+main section:nth-child(3) .card {
+  background: #210646;
+}
+main section:nth-child(3) .card > button {
+  margin: 12px;
+  background-color: transparent;
+  border: 2px solid #F1E7FF;
+  border-radius: 24px;
+  color: #F1E7FF;
+  display: inline-block;
+  width: fit-content;
+}
+main section:nth-child(3) .card > button span {
+  display: inline-block;
+  padding: 6px;
+  font-size: 1.2rem;
+}
+main section:nth-child(3) .card .componente-boton-cerrar {
+  z-index: -1;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0s 0.45s;
+  cursor: pointer;
+}
+main section:nth-child(3) .card .componente-boton-cerrar::before {
+  transform: rotate(45deg) translateX(100%);
+}
+main section:nth-child(3) .card .componente-boton-cerrar::after {
+  transform: rotate(-45deg) translateX(100%);
+}
+main section:nth-child(3) .card .componente-boton-cerrar::before, main section:nth-child(3) .card .componente-boton-cerrar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
   width: 100%;
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.6s, width 0.7s 0.7s, z-index 0s;
-}
-main section:nth-child(3) .card.caixa-conteudo-ativo .componente-fondo-imagen {
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.6s;
-}
-main section:nth-child(3) .card.caixa-conteudo-ativo .componente-fondo-imagen::before {
-  transition-delay: 0.6s;
-  transform: scale(1.1);
-}
-main section:nth-child(3) > .contenido-general.caixa--componente-ativo .componente-fondo-imagen {
-  width: calc(100vw - 140px);
-}
-main section:nth-child(3) > .contenido-general.caixa--componente-ativo .componente-visual-inicial {
+  height: 8px;
+  margin-top: -4px;
+  background: #F1E7FF;
   opacity: 0;
-  transform: translateY(30px);
+  transition: opacity 0s;
+}
+main section:nth-child(3) .card h3 {
+  color: #7563AA;
+  font-size: 2rem;
+}
+main section:nth-child(3) .card p {
+  font-size: 1.2rem;
+  color: #eddfff;
+}
+main section:nth-child(3) .card div, main section:nth-child(3) .card .card-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+main section:nth-child(3) .card .card-footer li {
+  width: 42px;
+  height: 42px;
+  margin: auto 8px;
+}
+main section:nth-child(3) .card .card-footer li a {
+  font-size: 28px;
+  text-align: center;
+}
+main section:nth-child(3) .card .card-footer li a span {
+  border-radius: 50%;
+  color: #7563AA;
+  border: 3px solid #7563AA;
   transition: all 0.5s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-main section:nth-child(3) > .contenido-general.js-conteudo-geral > .componente-visual-inicial {
-  opacity: 0;
-  transform: translateY(10px);
+main section:nth-child(3) .card .card-footer li a .bi-github:hover {
+  color: rgb(234, 234, 234);
+  border-color: rgb(234, 234, 234);
 }
-main section:nth-child(3) > .contenido-general.js-conteudo-geral > .componente-fondo-imagen::before {
-  transform: translate3d(0, -100%, 0) scale(1.2);
+main section:nth-child(3) .card .card-footer li a .bi-laptop:hover {
+  color: #afa5ce;
+  border-color: #afa5ce;
 }
-main section:nth-child(3) > .contenido-general {
+main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
+  color: rgb(119, 67, 67);
+  border-color: rgb(119, 67, 67);
+}
+
+.conteudo-geral {
   position: relative;
   overflow: hidden;
   height: 100vh;
   padding: 80px 70px;
 }
-main section:nth-child(3) > .contenido-general > .componente-interno-general {
+
+.componente-interno-geral {
   position: relative;
   height: 100%;
 }
-main section:nth-child(3) > .contenido-general > .componente-interno-general:hover {
+
+.componente-interno-geral:hover .componente-fundo-imagem:after {
   opacity: 1;
 }
-main section:nth-child(3) > .contenido-general > .componente-interno-general:hover .componente-fondo-imagen::after {
-  opacity: 1;
-}
-main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .componente-fondo-imagen::before {
-  transition: transform 0.8s;
-}
-main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .componente-fondo-imagen::after {
-  transition: opacity 0.5s 1.4s;
-  opacity: 1 !important;
-}
-main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo > .componente-index {
-  transition: transform 0.5s, opacity 0.3s;
-  opacity: 0;
-}
-main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body {
-  z-index: 2;
-  opacity: 1;
-  pointer-events: auto;
-  transition: all 0.5s 1.4s;
-}
-main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body .componente-boton-cerrar {
-  z-index: 5;
-  opacity: 1;
-  pointer-events: auto;
-  transition: all 0s 1.4s;
-}
-main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body .componente-boton-cerrar::before, main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body .componente-boton-cerrar::after {
-  opacity: 1;
-}
-main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body .componente-boton-cerrar::before {
-  transition: all 0.3s 1.4s cubic-bezier(0.72, 0.09, 0.32, 1.57);
-  transform: rotate(45deg) translateX(0);
-}
-main section:nth-child(3) .contenido-general .card.caixa-conteudo-ativo .body .componente-boton-cerrar::after {
-  transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
-  transform: rotate(-45deg) translateX(0);
-}
-main section:nth-child(3) .card {
+
+.componente {
   position: absolute;
   left: 0;
   top: 0;
@@ -251,28 +289,41 @@ main section:nth-child(3) .card {
   transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s;
   will-change: transform, width, opacity;
 }
-main section:nth-child(3) .card:not(.caixa-conteudo-ativo) {
+
+.componente:not(.caixa-conteudo-ativo) {
   cursor: pointer;
 }
-main section:nth-child(3) .card > .componente-interno {
+
+.componente-sem-rolagem {
   overflow: hidden;
   position: relative;
   height: 100%;
 }
-main section:nth-child(3) .card > .componente-interno > .componente {
+
+.componente-interno {
   overflow: hidden;
   position: relative;
   height: 100%;
   transition: transform 1s;
+}
+
+.conteudo-geral.js-conteudo-geral .componente-interno {
   transform: translate3d(0, 100%, 0);
 }
-main section:nth-child(3) .card .componente-fondo-imagen {
+
+.componente-fundo-imagem {
   position: relative;
   height: 100%;
   transition: transform 0.6s 0.7s;
   will-change: transform;
 }
-main section:nth-child(3) .card .componente-fondo-imagen::before {
+
+/*-------hasta aca hecho----------*/
+.conteudo-geral.caixa--componente-ativo .componente-fundo-imagem {
+  width: calc(100vw - 140px);
+}
+
+.componente-fundo-imagem:before {
   content: "";
   position: absolute;
   left: 0;
@@ -284,7 +335,16 @@ main section:nth-child(3) .card .componente-fondo-imagen::before {
   transition: transform 1s;
   transform: translate3d(0, 0, 0) scale(1);
 }
-main section:nth-child(3) .card .componente-fondo-imagen::after {
+
+.conteudo-geral.js-conteudo-geral .componente-fundo-imagem:before {
+  transform: translate3d(0, -100%, 0) scale(1.2);
+}
+
+.componente.caixa-conteudo-ativo .componente-fundo-imagem:before {
+  transition: transform 0.8s;
+}
+
+.componente-fundo-imagem:after {
   content: "";
   z-index: 1;
   position: absolute;
@@ -296,7 +356,13 @@ main section:nth-child(3) .card .componente-fondo-imagen::after {
   opacity: 0;
   transition: opacity 0.5s;
 }
-main section:nth-child(3) .card .componente-visual-inicial {
+
+.conteudo-geral.caixa--componente-ativo .componente-fundo-imagem:after {
+  transition: opacity 0.5s 1.4s;
+  opacity: 1 !important;
+}
+
+.componente-visual-inicial {
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -309,12 +375,25 @@ main section:nth-child(3) .card .componente-visual-inicial {
   height: 100%;
   transition: all 0.3s 1.2s;
 }
-main section:nth-child(3) .card .componente-visual-inicial > strong {
-  color: #F1E7FF;
+
+.conteudo-geral.js-conteudo-geral .componente-visual-inicial {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.conteudo-geral.caixa--componente-ativo .componente-visual-inicial {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s;
+}
+
+.componente-titulo {
+  color: #fff;
   text-transform: uppercase;
   font-size: 2rem;
 }
-main section:nth-child(3) .card .body {
+
+.componente-content {
   z-index: -1;
   position: absolute;
   left: 0;
@@ -326,21 +405,21 @@ main section:nth-child(3) .card .body {
   pointer-events: none;
   transition: all 0.1s;
 }
-main section:nth-child(3) .card .body > button {
-  margin: 12px;
-  background-color: transparent;
-  border: 2px solid #F1E7FF;
-  border-radius: 24px;
-  color: #F1E7FF;
-  display: inline-block;
-  width: fit-content;
+
+.componente.caixa-conteudo-ativo .componente-content {
+  z-index: 2;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.5s 1.4s;
 }
-main section:nth-child(3) .card .body > button span {
-  display: inline-block;
-  padding: 6px;
-  font-size: 1.2rem;
+
+.componente-text {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #fff;
 }
-main section:nth-child(3) .card .body .componente-boton-cerrar {
+
+.componente-botao-fechar {
   z-index: -1;
   position: absolute;
   right: 10px;
@@ -352,13 +431,16 @@ main section:nth-child(3) .card .body .componente-boton-cerrar {
   transition: all 0s 0.45s;
   cursor: pointer;
 }
-main section:nth-child(3) .card .body .componente-boton-cerrar::before {
-  transform: rotate(45deg) translateX(100%);
+
+.componente.caixa-conteudo-ativo .componente-botao-fechar {
+  z-index: 5;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0s 1.4s;
 }
-main section:nth-child(3) .card .body .componente-boton-cerrar::after {
-  transform: rotate(-45deg) translateX(100%);
-}
-main section:nth-child(3) .card .body .componente-boton-cerrar::before, main section:nth-child(3) .card .body .componente-boton-cerrar::after {
+
+.componente-botao-fechar:before,
+.componente-botao-fechar:after {
   content: "";
   position: absolute;
   left: 0;
@@ -366,56 +448,37 @@ main section:nth-child(3) .card .body .componente-boton-cerrar::before, main sec
   width: 100%;
   height: 8px;
   margin-top: -4px;
-  background: #F1E7FF;
+  background: #fff;
   opacity: 0;
   transition: opacity 0s;
 }
-main section:nth-child(3) .card .body h3 {
-  color: #7563AA;
-  font-size: 2rem;
+
+/*-------------------*/
+.componente.caixa-conteudo-ativo .componente-botao-fechar:before,
+.componente.caixa-conteudo-ativo .componente-botao-fechar:after {
+  opacity: 1;
 }
-main section:nth-child(3) .card .body p {
-  font-size: 1.2rem;
-  color: #eddfff;
+
+/*-------------------*/
+.componente-botao-fechar:before {
+  transform: rotate(45deg) translateX(100%);
 }
-main section:nth-child(3) .card .body div, main section:nth-child(3) .card .body .card-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+
+.componente.caixa-conteudo-ativo .componente-botao-fechar:before {
+  transition: all 0.3s 1.4s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+  transform: rotate(45deg) translateX(0);
 }
-main section:nth-child(3) .card .body .card-footer li {
-  width: 42px;
-  height: 42px;
-  margin: auto 8px;
+
+.componente-botao-fechar:after {
+  transform: rotate(-45deg) translateX(100%);
 }
-main section:nth-child(3) .card .body .card-footer li a {
-  font-size: 28px;
-  text-align: center;
+
+.componente.caixa-conteudo-ativo .componente-botao-fechar:after {
+  transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+  transform: rotate(-45deg) translateX(0);
 }
-main section:nth-child(3) .card .body .card-footer li a span {
-  border-radius: 50%;
-  color: #7563AA;
-  border: 3px solid #7563AA;
-  transition: all 0.5s;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main section:nth-child(3) .card .body .card-footer li a .bi-github:hover {
-  color: rgb(234, 234, 234);
-  border-color: rgb(234, 234, 234);
-}
-main section:nth-child(3) .card .body .card-footer li a .bi-laptop:hover {
-  color: #afa5ce;
-  border-color: #afa5ce;
-}
-main section:nth-child(3) .card .body .card-footer li a .bi-diagram-3:hover {
-  color: rgb(119, 67, 67);
-  border-color: rgb(119, 67, 67);
-}
-main section:nth-child(3) .card .componente-index {
+
+.componente-index {
   overflow: hidden;
   position: absolute;
   left: 0;
@@ -430,25 +493,44 @@ main section:nth-child(3) .card .componente-index {
   transition: transform 0.5s, opacity 0.3s 1.4s;
   transform: translate3d(0, 1vw, 0);
 }
-main section:nth-child(3) .card .componente-index .componente-index-back, main section:nth-child(3) .card .componente-index .componente-index-front {
+
+.componente:hover .componente-index {
+  transform: translate3d(0, 0, 0);
+}
+
+.conteudo-geral.caixa--componente-ativo .componente-index {
+  transition: transform 0.5s, opacity 0.3s;
+  opacity: 0;
+}
+
+.componente-index-back,
+.componente-index-front {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
 }
-main section:nth-child(3) .card .componente-index .componente-index-back {
+
+.componente-index-back {
   color: #2f3840;
   opacity: 0;
   transition: opacity 0.25s 0.25s;
 }
-main section:nth-child(3) .card .componente-index .componente-index-front .componente-index-overlay {
+
+.componente:hover .componente-index-back {
+  transition: opacity 0.25s;
+  opacity: 1;
+}
+
+.componente-index-overlay {
   overflow: hidden;
   position: relative;
   transform: translate3d(0, 100%, 0);
   transition: transform 0.5s 0.1s;
   color: transparent;
 }
-main section:nth-child(3) .card .componente-index .componente-index-front .componente-index-overlay::before {
+
+.componente-index-overlay:before {
   content: attr(data-index);
   position: absolute;
   left: 0;
@@ -459,103 +541,115 @@ main section:nth-child(3) .card .componente-index .componente-index-front .compo
   transform: translate3d(0, -100%, 0);
   transition: transform 0.5s 0.1s;
 }
-main section:nth-child(3) .card:hover .componente-index {
+
+.componente:hover .componente-index-overlay {
   transform: translate3d(0, 0, 0);
 }
-main section:nth-child(3) .card:hover .componente-index .componente-index-back {
-  transition: opacity 0.25s;
-  opacity: 1;
-}
-main section:nth-child(3) .card:hover .componente-index .componente-index-front .componente-index-overlay {
+
+.componente:hover .componente-index-overlay:before {
   transform: translate3d(0, 0, 0);
 }
-main section:nth-child(3) .card:hover .componente-index .componente-index-front .componente-index-overlay::before {
-  transform: translate3d(0, 0, 0);
-}
-main section:nth-child(3) .componente-boton-cerrar::before, main section:nth-child(3) .componente-boton-cerrar::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 8px;
-  margin-top: -4px;
-  background: #F1E7FF;
-  opacity: 0;
-  transition: opacity 0s;
-}
-main section:nth-child(3) .componente-boton-cerrar::before {
-  transform: rotate(45deg) translateX(100%);
-}
-main section:nth-child(3) .componente-boton-cerrar::after {
-  transform: rotate(-45deg) translateX(100%);
-}
 
-.contenido-general.caixa--componente-ativo .card:nth-child(1):not(.caixa-conteudo-ativo) {
-  transform: scale(0.5) translate3d(0%, 0, 0);
-  opacity: 0;
-  transition: transform 0.95s, opacity 0.95s;
-}
-
-.card:nth-child(1) {
-  transform: translate3d(0%, 0, 0);
-  transform-origin: 50%, 50%;
-}
-.card:nth-child(1) .componente-interno {
-  transition-delay: 0ss;
-}
-.card:nth-child(1) .componente-interno .componente-fondo-imagen {
-  transform: translate3d(0%, 0, 0);
-}
-.card:nth-child(1) .componente-interno .componente-fondo-imagen::before {
-  transition-delay: 0;
-  background-image: url("../../multimedia/Freaks3DPersoDestkop.png");
-}
-
-.contenido-general.caixa--componente-ativo .card:nth-child(2):not(.caixa-conteudo-ativo) {
+.conteudo-geral.caixa--componente-ativo .componente:nth-child(2):not(.caixa-conteudo-ativo) {
   transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
   opacity: 0;
   transition: transform 0.95s, opacity 0.95s;
 }
 
-.card:nth-child(2) {
-  transform: translate3d(105.2083333333%, 0, 0);
-  transform-origin: 155.2083333333%, 50%;
-}
-.card:nth-child(2) .componente-interno {
-  transition-delay: 0.1ss;
-}
-.card:nth-child(2) .componente-interno .componente-fondo-imagen {
+.componente:nth-child(1) {
   transform: translate3d(0%, 0, 0);
 }
-.card:nth-child(2) .componente-interno .componente-fondo-imagen::before {
-  transition-delay: 0;
-  background-image: url("../../multimedia/LandingQualityDestkop.png");
+.componente:nth-child(1) .componente-interno {
+  transition-delay: 0s;
+}
+.componente:nth-child(1) .componente-fundo-imagem::before {
+  transition-delay: 0s;
+  background-image: url("../multimedia/Freaks3DPersoDestkop.png");
 }
 
-.contenido-general.caixa--componente-ativo .card:nth-child(3):not(.caixa-conteudo-ativo) {
-  transform: scale(0.5) translate3d(210.4166666667%, 0, 0);
+.conteudo-geral.caixa--componente-ativo .componente:nth-child(2):not(.caixa-conteudo-ativo) {
+  transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
   opacity: 0;
   transition: transform 0.95s, opacity 0.95s;
 }
 
-.card:nth-child(3) {
-  transform: translate3d(210.4166666667%, 0, 0);
-  transform-origin: 260.4166666667%, 50%;
+.componente:nth-child(2) {
+  transform: translate3d(105.2083333333%, 0, 0);
 }
-.card:nth-child(3) .componente-interno {
-  transition-delay: 0.2ss;
+.componente:nth-child(2) .componente-interno {
+  transition-delay: 1s;
 }
-.card:nth-child(3) .componente-interno .componente-fondo-imagen {
-  transform: translate3d(0%, 0, 0);
-}
-.card:nth-child(3) .componente-interno .componente-fondo-imagen::before {
-  transition-delay: 0;
-  background-image: url("../../multimedia/LandingQualityDestkopx.png");
+.componente:nth-child(2) .componente-fundo-imagem::before {
+  transition-delay: 1s;
+  background-image: url("../multimedia/LandingQualityDestkop.png");
 }
 
-.card:hover .componente-fondo-imagen::after {
+.conteudo-geral.caixa--componente-ativo .componente:nth-child(2):not(.caixa-conteudo-ativo) {
+  transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
   opacity: 0;
+  transition: transform 0.95s, opacity 0.95s;
+}
+
+.componente:nth-child(3) {
+  transform: translate3d(210.4166666667%, 0, 0);
+}
+.componente:nth-child(3) .componente-interno {
+  transition-delay: 2s;
+}
+.componente:nth-child(3) .componente-fundo-imagem::before {
+  transition-delay: 2s;
+  background-image: url("../multimedia/LandingQualityDestkopx.png");
+}
+
+.conteudo-geral.caixa--componente-ativo .componente:nth-child(2):not(.caixa-conteudo-ativo) {
+  transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+  opacity: 0;
+  transition: transform 0.95s, opacity 0.95s;
+}
+
+.componente:nth-child(4) {
+  transform: translate3d(315.625%, 0, 0);
+}
+.componente:nth-child(4) .componente-interno {
+  transition-delay: 3s;
+}
+.componente:nth-child(4) .componente-fundo-imagem::before {
+  transition-delay: 3s;
+  background-image: url("../multimedia/Freaks3DPersoDestkop.png");
+}
+
+.conteudo-geral.caixa--componente-ativo .componente:nth-child(2):not(.caixa-conteudo-ativo) {
+  transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+  opacity: 0;
+  transition: transform 0.95s, opacity 0.95s;
+}
+
+.componente:nth-child(5) {
+  transform: translate3d(420.8333333333%, 0, 0);
+}
+.componente:nth-child(5) .componente-interno {
+  transition-delay: 4s;
+}
+.componente:nth-child(5) .componente-fundo-imagem::before {
+  transition-delay: 4s;
+  background-image: url("../multimedia/Freaks3DPersoDestkop.png");
+}
+
+.componente.caixa-conteudo-ativo {
+  z-index: 1;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s, width 0.7s 0.7s, z-index 0s;
+}
+
+.componente.caixa-conteudo-ativo .componente-fundo-imagem {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s;
+}
+
+.componente.caixa-conteudo-ativo .componente-fundo-imagem:before {
+  transition-delay: 0.6s;
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */

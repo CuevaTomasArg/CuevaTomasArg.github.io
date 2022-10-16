@@ -1,7 +1,7 @@
-var $conteudoGeral = document.querySelector(".contenido-general");
-var $conteudoEmArray = [].slice.call(document.querySelectorAll(".card"));
+var $conteudoGeral = document.querySelector(".conteudo-geral");
+var $conteudoEmArray = [].slice.call(document.querySelectorAll(".componente"));
 var $botoesDeFechar = [].slice.call(
-  document.querySelectorAll(".componente-boton-cerrar")
+  document.querySelectorAll(".componente-botao-fechar")
 );
 
 setTimeout(function () {
@@ -21,7 +21,7 @@ $botoesDeFechar.forEach(function ($btn) {
     e.stopPropagation();
     $conteudoGeral.classList.remove("caixa--componente-ativo");
     document
-      .querySelector(".card.caixa-conteudo-ativo")
+      .querySelector(".componente.caixa-conteudo-ativo")
       .classList.remove("caixa-conteudo-ativo");
   });
 });
