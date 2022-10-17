@@ -6,7 +6,7 @@ $base-delay:0s;
 
 
  @for $i from 1 through 5{
-    .conteudo-geral.caixa--componente-ativo .componente:nth-child(2):not(.caixa-conteudo-ativo) {
+    .conteudo-geral.caixa--componente-ativo .componente:nth-child(#{$i}):not(.caixa-conteudo-ativo) {
     transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
     opacity: 0;
     transition: transform 0.95s, opacity 0.95s;
@@ -24,7 +24,7 @@ $base-delay:0s;
         }
 
     }
-    $base-delay:$base-delay + 1;
+    $base-delay:$base-delay + 0.1s;
 }
 .componente.caixa-conteudo-ativo {
     z-index: 1;

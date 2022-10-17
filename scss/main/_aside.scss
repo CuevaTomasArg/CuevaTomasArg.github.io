@@ -1,0 +1,33 @@
+aside{
+    position: fixed;
+    top: 156px;
+    right: 64px;
+    bottom: 300px;
+    nav{
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            li{
+                text-align: center;
+                margin: 12px auto;
+                a{
+                    font-size: 28px;
+                    color: darken($parrafos ,1.5%);
+                }
+                hr{
+                    position: relative;
+                    top:12px;
+                    height: 300px;
+                    margin: 2px auto;
+                    display: inline-block;
+                    color: darken($parrafos ,1.5%);
+                    background-color: darken($parrafos ,1.5%);
+                 }
+            }
+        }
+        
+    }
+
+    
+}

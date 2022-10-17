@@ -26,7 +26,11 @@ h1{
 ul{
     list-style-type: none;
 }
+hr{
+    background-color: $parrafos
+}
 
 @import "main/header";
 @import "main/main";
 @import "main/projects";
+@import "main/aside";
