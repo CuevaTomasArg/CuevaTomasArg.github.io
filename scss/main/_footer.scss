@@ -1,0 +1,44 @@
+footer{
+    h2{
+        margin-bottom: 12px;
+    }
+    form{
+        margin: 64px auto;
+        display: flex;
+        flex-direction: row;
+        // justify-content: space-evenly;
+        flex-wrap: wrap;
+        label{
+            color: $parrafos;
+            display: inline-block;
+            margin-top: 32px;
+            margin-bottom: 8px;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            &:nth-child(1){
+                margin-left: 15%;
+            }
+            &:nth-child(2){
+                margin-left: 5%;
+            }
+            input,textarea{
+                border-radius: 8px;
+                background-color: $fondo-inputs;
+                border: 1.5px solid $h2;
+                color: $parrafos;
+                font-size: small;
+            }
+            input{
+                width: 300px;
+                height: 28px;
+            }
+            textarea{
+                width: 600px;
+                height: 300px;
+                resize: none;
+            }
+        }
+    }
+}

@@ -7,13 +7,27 @@
   padding: 0;
 }
 
+.nombreSeccion{
+    text-align: center;
+    font-size: $f-small;
+    color: $parrafos;
+    span{
+        margin-left: 20%;
+    }
+    hr{
+        width: 60%;
+        margin: auto 32px;
+        display: inline-block;
+    }
+}
+
 body{
     background-color: $fondo;
 }
 a{
     text-decoration: none
 }
-p{
+p,label{
     color: $parrafos;
     font-family: $font-texto;
 }
@@ -34,3 +48,4 @@ hr{
 @import "main/main";
 @import "main/projects";
 @import "main/aside";
+@import "main/footer";

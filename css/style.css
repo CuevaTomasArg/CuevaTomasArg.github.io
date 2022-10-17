@@ -7,6 +7,20 @@
   padding: 0;
 }
 
+.nombreSeccion {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #F1E7FF;
+}
+.nombreSeccion span {
+  margin-left: 20%;
+}
+.nombreSeccion hr {
+  width: 60%;
+  margin: auto 32px;
+  display: inline-block;
+}
+
 body {
   background-color: #0B0217;
 }
@@ -15,7 +29,7 @@ a {
   text-decoration: none;
 }
 
-p {
+p, label {
   color: #F1E7FF;
   font-family: "Roboto", "Quicksand", sans-serif;
 }
@@ -111,19 +125,6 @@ main section:first-child p:last-child {
   padding-left: 12px;
   padding-top: 2px;
 }
-main section:nth-child(2) h2 {
-  text-align: center;
-  font-size: 1.6rem;
-  color: #F1E7FF;
-}
-main section:nth-child(2) h2 span {
-  margin-left: 20%;
-}
-main section:nth-child(2) h2 hr {
-  width: 60%;
-  margin: auto 32px;
-  display: inline-block;
-}
 main section:nth-child(2) p {
   width: 55%;
   font-size: 1.2rem;
@@ -160,19 +161,6 @@ main section:nth-child(2) p:last-child button {
   text-align: center;
   font-weight: 400;
   color: #F1E7FF;
-}
-main section:nth-child(3) h2 {
-  text-align: center;
-  font-size: 1.6rem;
-  color: #F1E7FF;
-}
-main section:nth-child(3) h2 span {
-  margin-left: 20%;
-}
-main section:nth-child(3) h2 hr {
-  width: 60%;
-  margin: auto 32px;
-  display: inline-block;
 }
 main section:nth-child(3) .card > button:first-child {
   margin: 12px;
@@ -444,6 +432,12 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
   opacity: 0;
   transition: opacity 0s;
 }
+.componente-botao-fechar::before {
+  transform: rotate(45deg) translateX(100%);
+}
+.componente-botao-fechar::after {
+  transform: rotate(-45deg) translateX(100%);
+}
 
 .componente.caixa-conteudo-ativo .componente-botao-fechar {
   z-index: 5;
@@ -451,28 +445,14 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
   pointer-events: auto;
   transition: all 0s 1.4s;
 }
-
-/*-------------------*/
-.componente.caixa-conteudo-ativo .componente-botao-fechar:before,
-.componente.caixa-conteudo-ativo .componente-botao-fechar:after {
+.componente.caixa-conteudo-ativo .componente-botao-fechar::before, .componente.caixa-conteudo-ativo .componente-botao-fechar::after {
   opacity: 1;
 }
-
-/*-------------------*/
-.componente-botao-fechar:before {
-  transform: rotate(45deg) translateX(100%);
-}
-
-.componente.caixa-conteudo-ativo .componente-botao-fechar:before {
+.componente.caixa-conteudo-ativo .componente-botao-fechar::before {
   transition: all 0.3s 1.4s cubic-bezier(0.72, 0.09, 0.32, 1.57);
   transform: rotate(45deg) translateX(0);
 }
-
-.componente-botao-fechar:after {
-  transform: rotate(-45deg) translateX(100%);
-}
-
-.componente.caixa-conteudo-ativo .componente-botao-fechar:after {
+.componente.caixa-conteudo-ativo .componente-botao-fechar::after {
   transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
   transform: rotate(-45deg) translateX(0);
 }
@@ -678,6 +658,48 @@ aside nav ul li hr {
   display: inline-block;
   color: #eddfff;
   background-color: #eddfff;
+}
+
+footer h2 {
+  margin-bottom: 12px;
+}
+footer form {
+  margin: 64px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+footer form label {
+  color: #F1E7FF;
+  display: inline-block;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+footer form div {
+  display: flex;
+  flex-direction: column;
+}
+footer form div:nth-child(1) {
+  margin-left: 15%;
+}
+footer form div:nth-child(2) {
+  margin-left: 5%;
+}
+footer form div input, footer form div textarea {
+  border-radius: 8px;
+  background-color: #130A1F;
+  border: 1.5px solid #C2B8D0;
+  color: #F1E7FF;
+  font-size: small;
+}
+footer form div input {
+  width: 300px;
+  height: 28px;
+}
+footer form div textarea {
+  width: 600px;
+  height: 300px;
+  resize: none;
 }
 
 /*# sourceMappingURL=style.css.map */

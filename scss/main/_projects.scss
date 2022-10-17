@@ -161,32 +161,29 @@
       opacity: 0;
       transition: opacity 0s;
     }
+    &::before{
+      transform: rotate(45deg) translateX(100%);
+    }
+    &::after{
+      transform: rotate(-45deg) translateX(100%);
+    }
   }
   .componente.caixa-conteudo-ativo .componente-botao-fechar {
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
     transition: all 0s 1.4s;
-  }
-  /*-------------------*/
-  .componente.caixa-conteudo-ativo .componente-botao-fechar:before,
-  .componente.caixa-conteudo-ativo .componente-botao-fechar:after {
-    opacity: 1;
-  }
-  /*-------------------*/
-  .componente-botao-fechar:before {
-    transform: rotate(45deg) translateX(100%);
-  }
-  .componente.caixa-conteudo-ativo .componente-botao-fechar:before {
-    transition: all 0.3s 1.4s cubic-bezier(0.72, 0.09, 0.32, 1.57);
-    transform: rotate(45deg) translateX(0);
-  }
-  .componente-botao-fechar:after {
-    transform: rotate(-45deg) translateX(100%);
-  }
-  .componente.caixa-conteudo-ativo .componente-botao-fechar:after {
-    transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
-    transform: rotate(-45deg) translateX(0);
+    &::before,&::after{
+      opacity: 1;
+    }
+    &::before{
+      transition: all 0.3s 1.4s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+      transform: rotate(45deg) translateX(0);
+    }
+    &::after{
+      transition: all 0.3s 1.55s cubic-bezier(0.72, 0.09, 0.32, 1.57);
+      transform: rotate(-45deg) translateX(0);
+    }
   }
   .componente-index {
     overflow: hidden;

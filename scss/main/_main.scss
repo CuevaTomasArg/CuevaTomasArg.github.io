@@ -31,19 +31,6 @@ main{
         }
     }
     section:nth-child(2){
-        h2{
-            text-align: center;
-            font-size: $f-small;
-            color: $parrafos;
-            span{
-                margin-left: 20%;
-            }
-            hr{
-                width: 60%;
-                margin: auto 32px;
-                display: inline-block;
-            }
-        }
         p{
             width: 55%;
             font-size: $f-tiny+0.2;
@@ -87,19 +74,6 @@ main{
         }
     }
     section:nth-child(3){
-        h2{
-            text-align: center;
-            font-size: $f-small;
-            color: $parrafos;
-            span{
-                margin-left: 20%;
-            }
-            hr{
-                width: 60%;
-                margin: auto 32px;
-                display: inline-block;
-            }
-        }
         @import "cards";
     }
 }
