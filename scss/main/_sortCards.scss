@@ -5,9 +5,9 @@ $images:"../multimedia/Freaks3DPersoDestkop.png","../multimedia/LandingQualityDe
 $base-delay:0s;
 
 
- @for $i from 1 through 5{
+ @for $i from 1 through 3{
     .conteudo-geral.caixa--componente-ativo .componente:nth-child(#{$i}):not(.caixa-conteudo-ativo) {
-    transform: scale(0.5) translate3d(105.2083333333%, 0, 0);
+    transform: scale(0.5) translate3d( #{$distance *($i - 1)}, 0, 0);
     opacity: 0;
     transition: transform 0.95s, opacity 0.95s;
     }
@@ -40,37 +40,3 @@ $base-delay:0s;
     transition-delay: 0.6s;
     transform: scale(1.1);
   }
-
-//     .conteudo-geral.caixa--componente-ativo{
-//         .componente:nth-child(#{$i}):not(.caixa-conteudo-ativo){
-//             transform: scale(0.5) translate3d(#{($i - 1)*$distance}, 0, 0);
-//             opacity: 0;
-//             transition: transform 0.95s, opacity 0.95s;
-//     }
-// }
-//     .componente:nth-child(#{$i}){
-//         transform: translate3d(#{($i - 1)*$distance} ,0,0);
-//         transform-origin: #{($i - 1)*$distance+$transform-origin},50%;
-//         .componente-interno{
-//             @for $j from 0 to $i - 1 {
-//                 $base-delay:$base-delay + 0.1;
-//             }
-//             transition-delay:#{$base-delay}  ;
-            
-//             .componente-fundo-imagen:before{
-//                 transform:translate3d(0%,0,0);
-//                 &::before{
-//                     transition-delay:#{$base-delay};
-//                     background-image:  url(nth($images,$i)) ;
-//                 }
-//             }
-//         }
-//     }
-//     $base-delay:$base-delay + 0.1;
-// }
-
-// .componente:hover{
-//     .componente-fundo-imagen:before:{
-//         opacity: 0;
-//     }
-// }

@@ -1,0 +1,12 @@
+.agradecimiento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 156px auto;
+    img{
+        width: 35%;
+        margin-top: 32px;
+    }
+}
