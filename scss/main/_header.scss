@@ -4,14 +4,19 @@ header{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        align-items: center;
         height: 64px;
-        button{
+        .nav-button{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             border: none;
             background-color: transparent;
+            margin: 32px 28px 0px auto;
+            @media only screen and (min-width:600px){
+                display: none;
+            } 
             span{
                 display: inline-block;
                 background-color: $parrafos;
@@ -21,37 +26,17 @@ header{
                 border-radius: 8px;
 
             }
-            @media only screen and (min-width:415px){
-                display: none;
-            }
-        }
-        @media only screen and (max-width:415px) {
-            align-items: center;
-            img{
-                margin-top: 64px;
-                margin-left: 0;
-            }
-            ul{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                top: 0;
-                height: 1000px;
-                transition: transform .6s;
-                transform: translateX(-150%);
-                box-shadow:300px 0 10px #1d1d1d61;
-                &::after{
-                    transform: translateX(100%);
-                }
-            }   
         }
     
         img{
             height: 250%;
             margin-left: 64px;
             margin-right: auto;
+            z-index: 1;
+            @media only screen and (max-width:415px){
+                margin-left:32px ;
+                margin-top: 64px;
+            }
         }
         ul{
             display:flex ;
@@ -59,16 +44,43 @@ header{
             flex-direction: row;
             justify-content: space-evenly; 
             align-items: center;
-            
+            @media only screen and (max-width:600px){
+                flex-direction: column;
+                justify-content: start;
+                overflow-x: hidden;
+                padding-top: 60px;
+                width: 0;
+                z-index: 100;
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                transition: .6s;
+                &.active-canvas{
+                    background-color: $fondo-offcanvas
+                }   
+            }
             li{
                 display: inline-block;
                 margin: 24px 24px 0px;
                 font-size: $f-tiny;
+                &.closebtn{
+                    a{
+                        text-decoration: none;
+                    }
+                }
+                @media only screen and (min-width:600px){
+                    margin-top: 32px;
+                    &.closebtn{
+                        display: none;
+                    } 
+                }
                 a{
                     display: inline;
                     font-family: $font-texto;
                     color: $parrafos;
                     text-decoration:underline;
+                    transition: .5s;
                     button{
                         font-size: $f-tiny;
                         background-color: $fondo-botones;
@@ -86,4 +98,8 @@ header{
         }
         
     }
+}
+#main{
+    transition: margin-left .5s;
+    padding: 16px;
 }

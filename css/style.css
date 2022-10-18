@@ -68,17 +68,24 @@ header nav {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   height: 64px;
 }
-header nav button {
+header nav .nav-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: none;
   background-color: transparent;
+  margin: 32px 28px 0px auto;
 }
-header nav button span {
+@media only screen and (min-width: 600px) {
+  header nav .nav-button {
+    display: none;
+  }
+}
+header nav .nav-button span {
   display: inline-block;
   background-color: #F1E7FF;
   width: 32px;
@@ -86,39 +93,17 @@ header nav button span {
   margin: 4px auto;
   border-radius: 8px;
 }
-@media only screen and (min-width: 415px) {
-  header nav button {
-    display: none;
-  }
-}
-@media only screen and (max-width: 415px) {
-  header nav {
-    align-items: center;
-  }
-  header nav img {
-    margin-top: 64px;
-    margin-left: 0;
-  }
-  header nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    height: 1000px;
-    transition: transform 0.6s;
-    transform: translateX(-150%);
-    box-shadow: 300px 0 10px rgba(29, 29, 29, 0.3803921569);
-  }
-  header nav ul::after {
-    transform: translateX(100%);
-  }
-}
 header nav img {
   height: 250%;
   margin-left: 64px;
   margin-right: auto;
+  z-index: 1;
+}
+@media only screen and (max-width: 415px) {
+  header nav img {
+    margin-left: 32px;
+    margin-top: 64px;
+  }
 }
 header nav ul {
   display: flex;
@@ -127,16 +112,46 @@ header nav ul {
   justify-content: space-evenly;
   align-items: center;
 }
+@media only screen and (max-width: 600px) {
+  header nav ul {
+    flex-direction: column;
+    justify-content: start;
+    overflow-x: hidden;
+    padding-top: 60px;
+    width: 0;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transition: 0.6s;
+  }
+  header nav ul.active-canvas {
+    background-color: #1E0B38;
+  }
+}
 header nav ul li {
   display: inline-block;
   margin: 24px 24px 0px;
   font-size: 1rem;
+}
+header nav ul li.closebtn a {
+  text-decoration: none;
+}
+@media only screen and (min-width: 600px) {
+  header nav ul li {
+    margin-top: 32px;
+  }
+  header nav ul li.closebtn {
+    display: none;
+  }
 }
 header nav ul li a {
   display: inline;
   font-family: "Roboto", "Quicksand", sans-serif;
   color: #F1E7FF;
   text-decoration: underline;
+  transition: 0.5s;
 }
 header nav ul li a button {
   font-size: 1rem;
@@ -148,6 +163,11 @@ header nav ul li a button {
   font-family: "Roboto Flex", sans-serif;
   font-weight: 400;
   color: #F1E7FF;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
 }
 
 main {
@@ -684,6 +704,17 @@ aside nav ul li hr {
   color: #eddfff;
   background-color: #eddfff;
 }
+@media only screen and (max-width: 415px) {
+  aside {
+    position: relative;
+  }
+  aside hr {
+    display: none;
+  }
+  aside ul {
+    flex-direction: row;
+  }
+}
 
 footer h2 {
   margin-bottom: 12px;
@@ -725,6 +756,11 @@ footer form div textarea {
   width: 600px;
   height: 300px;
   resize: none;
+}
+@media only screen and (max-width: 415px) {
+  footer form div textarea {
+    width: 300px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

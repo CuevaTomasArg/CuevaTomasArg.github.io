@@ -19,12 +19,15 @@
     <header>
         <nav id="header">
             <img src="multimedia/LogoMain.svg" alt="">
-            <button type="button" class>
+            <button type="button" class="nav-button" onclick="openNav()">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul>
+            <ul id="nav-list">
+                <li class="closebtn">
+                    <a href="javascript:void(0)" onclick="closeNav()">&times</a>
+                </li>
                 <li>
                     <a href="#SobreMi">I.Sobre mi</a> 
                 </li>
@@ -44,7 +47,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main">
         <section data-aos="fade-up">
             <p>
                 Hola, soy

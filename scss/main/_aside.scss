@@ -28,6 +28,15 @@ aside{
         }
         
     }
+    @media only screen and (max-width:415px){
+        position: relative;
+        hr{
+            display: none;
+        }
+        ul{
+            flex-direction: row;
+        }
+    }
 
     
 }
