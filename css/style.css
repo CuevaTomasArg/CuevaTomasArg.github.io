@@ -70,6 +70,51 @@ header nav {
   justify-content: space-evenly;
   height: 64px;
 }
+header nav button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+header nav button span {
+  display: inline-block;
+  background-color: #F1E7FF;
+  width: 32px;
+  height: 4px;
+  margin: 4px auto;
+  border-radius: 8px;
+}
+@media only screen and (min-width: 415px) {
+  header nav button {
+    display: none;
+  }
+}
+@media only screen and (max-width: 415px) {
+  header nav {
+    align-items: center;
+  }
+  header nav img {
+    margin-top: 64px;
+    margin-left: 0;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 1000px;
+    transition: transform 0.6s;
+    transform: translateX(-150%);
+    box-shadow: 300px 0 10px rgba(29, 29, 29, 0.3803921569);
+  }
+  header nav ul::after {
+    transform: translateX(100%);
+  }
+}
 header nav img {
   height: 250%;
   margin-left: 64px;

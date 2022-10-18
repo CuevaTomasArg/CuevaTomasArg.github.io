@@ -5,6 +5,49 @@ header{
         flex-direction: row;
         justify-content: space-evenly;
         height: 64px;
+        button{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background-color: transparent;
+            span{
+                display: inline-block;
+                background-color: $parrafos;
+                width: 32px;
+                height: 4px;
+                margin: 4px auto;
+                border-radius: 8px;
+
+            }
+            @media only screen and (min-width:415px){
+                display: none;
+            }
+        }
+        @media only screen and (max-width:415px) {
+            align-items: center;
+            img{
+                margin-top: 64px;
+                margin-left: 0;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                height: 1000px;
+                transition: transform .6s;
+                transform: translateX(-150%);
+                box-shadow:300px 0 10px #1d1d1d61;
+                &::after{
+                    transform: translateX(100%);
+                }
+            }   
+        }
+    
         img{
             height: 250%;
             margin-left: 64px;
@@ -16,6 +59,7 @@ header{
             flex-direction: row;
             justify-content: space-evenly; 
             align-items: center;
+            
             li{
                 display: inline-block;
                 margin: 24px 24px 0px;

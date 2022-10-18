@@ -25,3 +25,5 @@ $botoesDeFechar.forEach(function ($btn) {
       .classList.remove("caixa-conteudo-ativo");
   });
 });
+
+var header = document.getElementById("header")
