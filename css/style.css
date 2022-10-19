@@ -7,20 +7,6 @@
   padding: 0;
 }
 
-.nombreSeccion {
-  text-align: center;
-  font-size: 1.6rem;
-  color: #F1E7FF;
-}
-.nombreSeccion span {
-  margin-left: 20%;
-}
-.nombreSeccion hr {
-  width: 60%;
-  margin: auto 32px;
-  display: inline-block;
-}
-
 body {
   background-color: #0B0217;
 }
@@ -114,6 +100,7 @@ header nav ul {
 }
 @media only screen and (max-width: 600px) {
   header nav ul {
+    margin: 0;
     flex-direction: column;
     justify-content: start;
     overflow-x: hidden;
@@ -123,11 +110,12 @@ header nav ul {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     transition: 0.6s;
+    background-color: #1E0B38;
   }
   header nav ul.active-canvas {
-    background-color: #1E0B38;
+    box-shadow: 200px 0px 0px rgba(13, 4, 43, 0.5294117647);
   }
 }
 header nav ul li {
@@ -174,6 +162,41 @@ main {
   margin: 128px 0px;
   width: 90%;
 }
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100%;
+    margin: 48px 0px;
+  }
+}
+main .nombreSeccion {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #F1E7FF;
+}
+@media only screen and (max-width: 600px) {
+  main .nombreSeccion {
+    text-align: start;
+  }
+}
+main .nombreSeccion span {
+  margin-left: 20%;
+}
+@media only screen and (max-width: 600px) {
+  main .nombreSeccion span {
+    margin-left: 8px;
+  }
+}
+main .nombreSeccion hr {
+  width: 60%;
+  margin: auto 32px;
+  display: inline-block;
+}
+@media only screen and (max-width: 600px) {
+  main .nombreSeccion hr {
+    margin: auto auto auto 24px;
+    width: 40%;
+  }
+}
 main section:first-child {
   display: flex;
   margin: 64px auto 256px auto;
@@ -181,6 +204,12 @@ main section:first-child {
   justify-content: space-between;
   align-items: flex-start;
   width: 50%;
+}
+@media only screen and (max-width: 600px) {
+  main section:first-child {
+    margin: 64px auto 256px 12px;
+    width: 100%;
+  }
 }
 main section:first-child h1 {
   font-size: 3rem;
@@ -196,12 +225,27 @@ main section:first-child p {
 main section:first-child p, main section:first-child h1, main section:first-child h2 {
   margin: 4px 0px;
 }
+@media only screen and (max-width: 600px) {
+  main section:first-child p, main section:first-child h1, main section:first-child h2 {
+    margin: 4px;
+  }
+}
 main section:first-child h1, main section:first-child h2 {
   padding-left: 16px;
+}
+@media only screen and (max-width: 600px) {
+  main section:first-child h1, main section:first-child h2 {
+    padding-left: 8px;
+  }
 }
 main section:first-child p:last-child {
   padding-left: 12px;
   padding-top: 2px;
+}
+@media only screen and (max-width: 600px) {
+  main section:first-child p:last-child {
+    padding-left: 8px;
+  }
 }
 main section:nth-child(2) p {
   width: 55%;
@@ -210,6 +254,12 @@ main section:nth-child(2) p {
   padding-left: 126px;
   color: #eddfff;
   line-height: 30px;
+}
+@media only screen and (max-width: 600px) {
+  main section:nth-child(2) p {
+    width: 100%;
+    padding-left: 12px;
+  }
 }
 main section:nth-child(2) ul {
   list-style-type: none;
@@ -336,6 +386,15 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
   height: 100vh;
   padding: 80px 70px;
 }
+@media only screen and (max-width: 415px) {
+  .conteudo-geral {
+    overflow-x: scroll;
+    padding: 60px 12px;
+  }
+  .conteudo-geral.caixa-conteudo-ativo {
+    overflow-x: hidden;
+  }
+}
 
 .componente-interno-geral {
   position: relative;
@@ -356,6 +415,13 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
   transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s;
   will-change: transform, width, opacity;
 }
+@media only screen and (max-width: 415px) {
+  .componente {
+    width: 80%;
+    scroll-snap-type: proximity;
+    scroll-snap-align: center;
+  }
+}
 
 .componente:not(.caixa-conteudo-ativo) {
   cursor: pointer;
@@ -366,12 +432,23 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
   position: relative;
   height: 100%;
 }
+@media only screen and (max-width: 415px) {
+  .componente-sem-rolagem {
+    width: 100%;
+  }
+}
 
 .componente-interno {
   overflow: hidden;
   position: relative;
   height: 100%;
   transition: transform 1s;
+}
+
+@media only screen and (max-width: 415px) {
+  .conteudo-geral.componente.caixa-conteudo-ativo .componente-interno {
+    width: 0;
+  }
 }
 
 .conteudo-geral.js-conteudo-geral .componente-interno {
@@ -386,9 +463,13 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
   will-change: transform;
 }
 
-/*-------hasta aca hecho----------*/
 .conteudo-geral.caixa--componente-ativo .componente-fundo-imagem {
   width: calc(100vw - 140px);
+}
+@media only screen and (maw-width: 415px) {
+  .conteudo-geral.caixa--componente-ativo .componente-fundo-imagem {
+    width: 100vw;
+  }
 }
 
 .componente-fundo-imagem:before {
@@ -402,6 +483,11 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
   background-position: center center;
   transition: transform 1s;
   transform: translate3d(0, 0, 0) scale(1);
+}
+@media only screen and (max-width: 415px) {
+  .componente-fundo-imagem:before {
+    width: 130%;
+  }
 }
 
 .conteudo-geral.js-conteudo-geral .componente-fundo-imagem:before {
@@ -423,6 +509,12 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
   background: rgba(28, 1, 51, 0.7);
   opacity: 0;
   transition: opacity 0.5s;
+}
+@media only screen and (max-width: 415px) {
+  .componente-fundo-imagem:after {
+    width: 131%;
+    height: 110%;
+  }
 }
 
 .conteudo-geral.caixa--componente-ativo .componente-fundo-imagem:after {
@@ -453,6 +545,11 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.5s;
+}
+@media only screen and (max-width: 415px) {
+  .conteudo-geral.caixa--componente-ativo .componente-visual-inicial {
+    width: 0;
+  }
 }
 
 .componente-titulo {
@@ -559,6 +656,11 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
 .conteudo-geral.caixa--componente-ativo .componente-index {
   transition: transform 0.5s, opacity 0.3s;
   opacity: 0;
+}
+@media only screen and (max-width: 415px) {
+  .conteudo-geral.caixa--componente-ativo .componente-index {
+    width: 0;
+  }
 }
 
 .componente-index-back,
@@ -682,40 +784,120 @@ aside {
   right: 64px;
   bottom: 300px;
 }
+@media only screen and (max-width: 600px) {
+  aside {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    left: 0;
+    top: 32px;
+  }
+}
+aside nav {
+  height: 64px;
+}
 aside nav ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+@media only screen and (max-width: 600px) {
+  aside nav ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto 0;
+  }
+}
 aside nav ul li {
+  width: 42px;
+  height: 42px;
+  margin: 12px 8px;
   text-align: center;
-  margin: 12px auto;
+}
+aside nav ul li:last-child {
+  border: none;
+  width: fit-content;
+  height: fit-content;
+}
+@media only screen and (max-width: 600px) {
+  aside nav ul li:last-child {
+    display: none;
+    width: 0;
+  }
 }
 aside nav ul li a {
-  font-size: 28px;
+  font-size: 24px;
+  padding: 8px;
+  text-align: center;
+  padding: 8px;
+}
+aside nav ul li a span {
+  border-radius: 50%;
   color: #eddfff;
+  border: 3px solid #eddfff;
+  transition: all 0.5s;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside nav ul li a .bi-github:hover {
+  color: rgb(234, 234, 234);
+  border-color: rgb(234, 234, 234);
+}
+aside nav ul li a .bi-linkedin:hover {
+  color: rgb(51, 101, 200);
+  border-color: rgb(51, 101, 200);
+}
+aside nav ul li a .bi-envelope:hover {
+  color: #b73f3f;
+  border-color: #b73f3f;
+}
+aside nav ul li a .bi-whatsapp:hover {
+  color: rgb(67, 119, 74);
+  border-color: rgb(67, 119, 74);
 }
 aside nav ul li hr {
   position: relative;
   top: 12px;
-  height: 300px;
-  margin: 2px auto;
+  height: 600px;
+  margin: 30px 20px;
   display: inline-block;
   color: #eddfff;
   background-color: #eddfff;
 }
-@media only screen and (max-width: 415px) {
-  aside {
-    position: relative;
-  }
-  aside hr {
-    display: none;
-  }
-  aside ul {
-    flex-direction: row;
+
+footer .nombreSeccion {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #F1E7FF;
+}
+@media only screen and (max-width: 600px) {
+  footer .nombreSeccion {
+    text-align: start;
   }
 }
-
+footer .nombreSeccion span {
+  margin-left: 20%;
+}
+@media only screen and (max-width: 600px) {
+  footer .nombreSeccion span {
+    margin-left: 8px;
+  }
+}
+footer .nombreSeccion hr {
+  width: 60%;
+  margin: auto 32px;
+  display: inline-block;
+}
+@media only screen and (max-width: 600px) {
+  footer .nombreSeccion hr {
+    margin: auto auto auto 24px;
+    width: 25%;
+  }
+}
 footer h2 {
   margin-bottom: 12px;
 }
@@ -724,6 +906,14 @@ footer form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media only screen and (max-width: 415px) {
+  footer form {
+    margin-bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 footer form label {
   color: #F1E7FF;
@@ -738,8 +928,19 @@ footer form div {
 footer form div:nth-child(1) {
   margin-left: 15%;
 }
+@media only screen and (max-width: 415px) {
+  footer form div:nth-child(1) {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
 footer form div:nth-child(2) {
   margin-left: 5%;
+}
+@media only screen and (max-width: 415px) {
+  footer form div:nth-child(2) {
+    margin-left: 12px;
+  }
 }
 footer form div input, footer form div textarea {
   border-radius: 8px;
@@ -751,6 +952,11 @@ footer form div input, footer form div textarea {
 footer form div input {
   width: 300px;
   height: 28px;
+}
+@media only screen and (max-width: 415px) {
+  footer form div input {
+    height: 30px;
+  }
 }
 footer form div textarea {
   width: 600px;

@@ -3,40 +3,121 @@ aside{
     top: 156px;
     right: 64px;
     bottom: 300px;
-    nav{
+    @media only screen and (max-width:600px){
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        // height:156px ;
+        left: 0;
+        top: 32px;
+    }
+    nav{ 
+        height: 64px;
         ul{
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @media only screen and (max-width:600px){
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                margin: auto 0;
+            }
             li{
+                width: 42px;
+                height: 42px;
+                margin: 12px 8px;
                 text-align: center;
-                margin: 12px auto;
+                &:last-child{
+                        border: none;
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                    @media only screen and (max-width:600px){
+                        &:last-child{
+                            display: none;
+                            width: 0;
+                        }
+                    }
                 a{
-                    font-size: 28px;
-                    color: darken($parrafos ,1.5%);
+                    font-size: 24px;
+                    padding: 8px;
+                    text-align: center;
+                    padding: 8px;
+                    span{
+                        border-radius: 50%;
+                        color: darken($parrafos, 1.5%) ;
+                        border:3px solid darken($parrafos, 1.5%);
+                        transition: all .5s;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                    }
+                    .bi-github:hover{
+                        color: rgb(234, 234, 234);
+                        border-color: rgb(234, 234, 234);
+                    }
+                    .bi-linkedin:hover{
+                        color: rgb(51, 101, 200);
+                        border-color:rgb(51, 101, 200)
+                    }
+                    .bi-envelope:hover{
+                        color: #b73f3f;
+                        border-color: #b73f3f;
+                    }
+                    .bi-whatsapp:hover{
+                        color:rgb(67, 119, 74);
+                        border-color: rgb(67, 119, 74);
+                    }
+                    
                 }
                 hr{
                     position: relative;
                     top:12px;
-                    height: 300px;
-                    margin: 2px auto;
+                    height: 600px;
+                    margin: 30px 20px;
                     display: inline-block;
                     color: darken($parrafos ,1.5%);
                     background-color: darken($parrafos ,1.5%);
-                 }
+                }
             }
+            // li{
+            //     text-align: center;
+            //     margin: 12px auto;
+            //     transition: all .3s;
+            //     border-radius: 50%;
+            //     border: 2.5px solid darken($parrafos ,1.5%);
+            //     &:hover{
+            //         background-color: darken($parrafos ,1.5%);
+            //         opacity: .1;
+            //     }
+            //     &:last-child{
+            //         border: none;
+            //     }
+            //     @media only screen and (max-width:600px){
+            //         &:last-child{
+            //             display: none;
+            //             width: 0;
+            //         }
+            //     }
+            //     a{
+            //         font-size: 28px;
+            //         color: darken($parrafos ,1.5%);
+            //         transition: all .3s;
+            //         padding: 8px;
+            //         display: inline-block;
+            //         // margin: auto;
+            //         &:hover{
+            //             color: $fondo;
+            //             // background-color: darken($parrafos ,1.5%);
+            //         }
+            //     }
+            
+            // }
         }
         
-    }
-    @media only screen and (max-width:415px){
-        position: relative;
-        hr{
-            display: none;
-        }
-        ul{
-            flex-direction: row;
-        }
-    }
-
-    
+    }    
 }

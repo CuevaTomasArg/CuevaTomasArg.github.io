@@ -19,7 +19,7 @@
     <header>
         <nav id="header">
             <img src="multimedia/LogoMain.svg" alt="">
-            <button type="button" class="nav-button" onclick="openNav()">
+            <button type="button" id="nav-button" class="nav-button" onclick="openNav()">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -29,13 +29,13 @@
                     <a href="javascript:void(0)" onclick="closeNav()">&times</a>
                 </li>
                 <li>
-                    <a href="#SobreMi">I.Sobre mi</a> 
+                    <a href="#SobreMi" onclick="closeNav()">I.Sobre mi</a> 
                 </li>
                 <li>
-                    <a href="#MiTrabajo">II.Mi trabajo</a> 
+                    <a href="#MiTrabajo" onclick="closeNav()">II.Mi trabajo</a> 
                 </li>
                 <li>
-                    <a href="#Contacto">III.Contacto</a> 
+                    <a href="#Contacto" onclick="closeNav()">III.Contacto</a> 
                 </li>
                 <li>
                     <a href="page/curriculum.html" target="_blank">
@@ -410,10 +410,10 @@
     <aside>
         <nav>
             <ul>
-                <li><a href="https://github.com/CuevaTomasArg" target="_blank"><i class="bi bi-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/tomas-santiago-cueva-211088238/"><i class="bi bi-linkedin"></i></a></li>
-                <li><a href="mailto:cuevatomass02@gmail.com"><i class="bi bi-envelope"></i></a></li>
-                <li><a href="https://wa.me/5491123731536"><i class="bi bi-whatsapp"></i></a></li>
+                <li><a href="https://github.com/CuevaTomasArg" target="_blank"><span class="bi bi-github"></span></a></li>
+                <li><a href="https://www.linkedin.com/in/tomas-santiago-cueva-211088238/" target="_blank"><span class="bi bi-linkedin"></span></a></li>
+                <li><a href="mailto:cuevatomass02@gmail.com" target="_blank"><span class="bi bi-envelope"></span></a></li>
+                <li><a href="https://wa.me/5491123731536" target="_blank"><span class="bi bi-whatsapp"></span></a></li>
                 <li><hr></li>
             </ul>
         </nav>        

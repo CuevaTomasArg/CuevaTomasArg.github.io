@@ -1,4 +1,27 @@
 footer{
+    .nombreSeccion{
+        text-align: center;
+        font-size: $f-small;
+        color: $parrafos;
+        @media only screen and (max-width:600px){
+            text-align: start;
+        }
+        span{
+            margin-left: 20%;
+            @media only screen and (max-width:600px){
+                margin-left: 8px;
+            }
+        }
+        hr{
+            width: 60%;
+            margin: auto 32px;
+            display: inline-block;
+            @media only screen and (max-width:600px){
+                margin: auto auto auto 24px;
+                width: 25%;
+            }
+        }
+    }
     h2{
         margin-bottom: 12px;
     }
@@ -8,6 +31,12 @@ footer{
         flex-direction: row;
         // justify-content: space-evenly;
         flex-wrap: wrap;
+        @media only screen and (max-width:415px){
+            margin-bottom: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         label{
             color: $parrafos;
             display: inline-block;
@@ -19,9 +48,17 @@ footer{
             flex-direction: column;
             &:nth-child(1){
                 margin-left: 15%;
+                @media only screen and (max-width:415px){
+                    margin-left: 12px;
+                    margin-right: 12px;
+                }
+                
             }
             &:nth-child(2){
                 margin-left: 5%;
+                @media only screen and (max-width:415px){
+                    margin-left: 12px;
+                }
             }
             input,textarea{
                 border-radius: 8px;
@@ -33,6 +70,9 @@ footer{
             input{
                 width: 300px;
                 height: 28px;
+                @media only screen and (max-width:415px){
+                    height: 30px;
+                }
             }
             textarea{
                 width: 600px;

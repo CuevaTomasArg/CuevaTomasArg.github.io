@@ -1,6 +1,33 @@
 main{
     margin: 128px 0px;
     width: 90%;
+    @media only screen and (max-width:600px){
+        width: 100%;
+        margin: 48px 0px;
+    }
+    .nombreSeccion{
+        text-align: center;
+        font-size: $f-small;
+        color: $parrafos;
+        @media only screen and (max-width:600px){
+            text-align: start;
+        }
+        span{
+            margin-left: 20%;
+            @media only screen and (max-width:600px){
+                margin-left: 8px;
+            }
+        }
+        hr{
+            width: 60%;
+            margin: auto 32px;
+            display: inline-block;
+            @media only screen and (max-width:600px){
+                margin: auto auto auto 24px;
+                width: 40%;
+            }
+        }
+    }
     section:first-child{
         display: flex;
         margin: 64px auto 256px auto;
@@ -8,8 +35,12 @@ main{
         justify-content: space-between;
         align-items: flex-start;
         width: 50%;
+        @media only screen and (max-width:600px){
+            margin: 64px auto 256px 12px;
+            width: 100%;
+        }
         h1{
-            font-size: $f-bold
+            font-size: $f-bold;
         }
         h2{
             color: nth($colores, 2 );
@@ -21,13 +52,22 @@ main{
         }
         p,h1,h2{
             margin: 4px 0px;
+            @media only screen and (max-width:600px){
+                margin: 4px;
+            }
         }
         h1,h2{
             padding-left:16px ;
+            @media only screen and (max-width:600px){
+                padding-left: 8px;
+            }
         }
         p:last-child{
             padding-left: 12px;
             padding-top: 2px;
+            @media only screen and (max-width:600px){
+                padding-left: 8px;
+            }
         }
     }
     section:nth-child(2){
@@ -38,6 +78,10 @@ main{
             padding-left: 126px;
             color: darken($parrafos ,1.5%);
             line-height:30px;
+            @media only screen and (max-width:600px){
+                width: 100%;
+                padding-left: 12px;
+            }
         }
         ul{
             list-style-type: none;
