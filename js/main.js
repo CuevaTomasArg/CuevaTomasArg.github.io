@@ -40,3 +40,4 @@ function closeNav() {
   ul.classList.remove("active-canvas")
 
 }
+console.log(screen.width, screen.height)

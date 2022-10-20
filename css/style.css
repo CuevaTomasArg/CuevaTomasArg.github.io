@@ -291,7 +291,7 @@ main section:nth-child(2) p:last-child button {
   color: #F1E7FF;
 }
 main section:nth-child(3) .card > button:first-child {
-  margin: 12px;
+  margin: 24px;
   background-color: transparent;
   border: 2px solid #F1E7FF;
   border-radius: 24px;
@@ -334,18 +334,25 @@ main section:nth-child(3) .card .componente-boton-cerrar::before, main section:n
   opacity: 0;
   transition: opacity 0s;
 }
-main section:nth-child(3) .card h3 {
+main section:nth-child(3) .card strong {
   color: #7563AA;
   font-size: 2rem;
+  font-family: "Roboto Flex", sans-serif;
 }
-main section:nth-child(3) .card p {
-  font-size: 1.2rem;
+main section:nth-child(3) .card > p {
+  font-size: 1.4rem;
   color: #eddfff;
+  margin: 32px 128px 48px 32px;
+  margin-right: 128px;
+  margin-left: 32px;
 }
 main section:nth-child(3) .card div, main section:nth-child(3) .card .card-footer {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+}
+main section:nth-child(3) .card div > ul, main section:nth-child(3) .card .card-footer > ul {
+  margin: 32px 64px;
 }
 main section:nth-child(3) .card .card-footer li {
   width: 42px;
@@ -724,7 +731,7 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
 }
 .componente:nth-child(1) .componente-fundo-imagem::before {
   transition-delay: 0s;
-  background-image: url("../multimedia/Freaks3DPersoDestkop.png");
+  background: no-repeat center/400% url("../multimedia/fotos/ProyectoFreaks3D.png");
 }
 
 .conteudo-geral.caixa--componente-ativo .componente:nth-child(2):not(.caixa-conteudo-ativo) {
@@ -741,7 +748,7 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
 }
 .componente:nth-child(2) .componente-fundo-imagem::before {
   transition-delay: 0.1s;
-  background-image: url("../multimedia/LandingQualityDestkop.png");
+  background: no-repeat center/400% url("../multimedia/fotos/ProyectoQuality.png");
 }
 
 .conteudo-geral.caixa--componente-ativo .componente:nth-child(3):not(.caixa-conteudo-ativo) {
@@ -758,7 +765,7 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
 }
 .componente:nth-child(3) .componente-fundo-imagem::before {
   transition-delay: 0.2s;
-  background-image: url("../multimedia/LandingQualityDestkopx.png");
+  background: no-repeat center/400% url("../multimedia/LandingQualityDestkopx.png");
 }
 
 .componente.caixa-conteudo-ativo {
@@ -776,6 +783,7 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
 .componente.caixa-conteudo-ativo .componente-fundo-imagem:before {
   transition-delay: 0.6s;
   transform: scale(1.1);
+  background: transparent;
 }
 
 aside {

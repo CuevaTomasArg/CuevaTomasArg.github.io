@@ -1,6 +1,6 @@
 .card{
         >button:first-child{
-            margin:12px; 
+            margin:24px ; 
             background-color: transparent;
             border: 2px solid $parrafos;
             border-radius: 24px;
@@ -43,18 +43,25 @@
                 transition: opacity 0s;
             }
         }
-        h3{
+        strong{
             color:nth($colores, 2 );
             font-size: $f-regular;
+            font-family: $font-H;
         }
-        p{
-            font-size: $f-tiny+0.2;
-            color: darken($parrafos ,1.5%)
+        >p{
+            font-size: $f-small - 0.2;
+            color: darken($parrafos ,1.5%);
+            margin: 32px 128px 48px 32px;
+            margin-right: 128px;
+            margin-left: 32px;
         }
         div,.card-footer{
             display: flex;
             flex-direction: row;
             align-items: flex-start;
+            >ul{
+                margin: 32px 64px;
+            }
         }
         .card-footer{
             li{

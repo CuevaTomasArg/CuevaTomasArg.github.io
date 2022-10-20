@@ -1,7 +1,7 @@
 
 $distance:105.20833333333%;
 $transform-origin:50%;
-$images:"../multimedia/Freaks3DPersoDestkop.png","../multimedia/LandingQualityDestkop.png","../multimedia/LandingQualityDestkopx.png","../multimedia/Freaks3DPersoDestkop.png","../multimedia/Freaks3DPersoDestkop.png";
+$images:"../multimedia/fotos/ProyectoFreaks3D.png","../multimedia/fotos/ProyectoQuality.png","../multimedia/LandingQualityDestkopx.png","../multimedia/Freaks3DPersoDestkop.png","../multimedia/Freaks3DPersoDestkop.png";
 $base-delay:0s;
 
 
@@ -11,6 +11,7 @@ $base-delay:0s;
     opacity: 0;
     transition: transform 0.95s, opacity 0.95s;
     }
+
     .componente:nth-child(#{$i}){
         transform: translate3d(#{($i - 1)*$distance},0,0);
         .componente-interno{
@@ -19,7 +20,7 @@ $base-delay:0s;
         .componente-fundo-imagem{
             &::before{
                 transition-delay: $base-delay;
-                background-image: url(nth($images,$i));
+                background: no-repeat center/400% url(nth($images,$i));
             }
         }
 
@@ -39,4 +40,5 @@ $base-delay:0s;
   .componente.caixa-conteudo-ativo .componente-fundo-imagem:before {
     transition-delay: 0.6s;
     transform: scale(1.1);
+    background: transparent;
   }
