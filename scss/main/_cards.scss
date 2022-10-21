@@ -43,15 +43,18 @@
                 transition: opacity 0s;
             }
         }
-        strong{
+        strong,h3{
             color:nth($colores, 2 );
             font-size: $f-regular;
             font-family: $font-H;
         }
+        h3{
+            margin-left: 32px;
+        }
         >p{
             font-size: $f-small - 0.2;
             color: darken($parrafos ,1.5%);
-            margin: 32px 128px 48px 32px;
+            margin: 32px 128px 32px 32px;
             margin-right: 128px;
             margin-left: 32px;
         }
@@ -60,7 +63,17 @@
             flex-direction: row;
             align-items: flex-start;
             >ul{
-                margin: 32px 64px;
+                margin: 24px 64px;
+            }
+        }
+        >.list-lenguajes{
+            margin-right: 32px;
+            ul{
+                li{
+                    margin-top: 8px;
+                    font-size:$f-tiny + 0.2 ;
+                }
+
             }
         }
         .card-footer{

@@ -334,15 +334,18 @@ main section:nth-child(3) .card .componente-boton-cerrar::before, main section:n
   opacity: 0;
   transition: opacity 0s;
 }
-main section:nth-child(3) .card strong {
+main section:nth-child(3) .card strong, main section:nth-child(3) .card h3 {
   color: #7563AA;
   font-size: 2rem;
   font-family: "Roboto Flex", sans-serif;
 }
+main section:nth-child(3) .card h3 {
+  margin-left: 32px;
+}
 main section:nth-child(3) .card > p {
   font-size: 1.4rem;
   color: #eddfff;
-  margin: 32px 128px 48px 32px;
+  margin: 32px 128px 32px 32px;
   margin-right: 128px;
   margin-left: 32px;
 }
@@ -352,7 +355,14 @@ main section:nth-child(3) .card div, main section:nth-child(3) .card .card-foote
   align-items: flex-start;
 }
 main section:nth-child(3) .card div > ul, main section:nth-child(3) .card .card-footer > ul {
-  margin: 32px 64px;
+  margin: 24px 64px;
+}
+main section:nth-child(3) .card > .list-lenguajes {
+  margin-right: 32px;
+}
+main section:nth-child(3) .card > .list-lenguajes ul li {
+  margin-top: 8px;
+  font-size: 1.2rem;
 }
 main section:nth-child(3) .card .card-footer li {
   width: 42px;
@@ -416,7 +426,7 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
   position: absolute;
   left: 0;
   top: 0;
-  width: 30.2%;
+  width: 44.2%;
   height: 100%;
   background: #0B0217;
   transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s;
@@ -649,11 +659,16 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
   height: 100%;
   min-height: 250px;
   text-align: center;
-  font-size: 20vw;
+  font-size: 6vw;
   line-height: 0.85;
   font-weight: bold;
   transition: transform 0.5s, opacity 0.3s 1.4s;
   transform: translate3d(0, 1vw, 0);
+}
+@media only screen and (max-width: 600px) {
+  .componente-index {
+    font-size: 18vW;
+  }
 }
 
 .componente:hover .componente-index {
@@ -731,7 +746,10 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
 }
 .componente:nth-child(1) .componente-fundo-imagem::before {
   transition-delay: 0s;
-  background: no-repeat center/400% url("../multimedia/fotos/ProyectoFreaks3D.png");
+  background: no-repeat center/200% url("../multimedia/fotos/ProyectoFreaks3D.png");
+}
+.componente:nth-child(1).caixa-conteudo-ativo .componente-fundo-imagem:before {
+  background: no-repeat center/100% url("../multimedia/fotos/ProyectoFreaks3D.png");
 }
 
 .conteudo-geral.caixa--componente-ativo .componente:nth-child(2):not(.caixa-conteudo-ativo) {
@@ -748,7 +766,10 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
 }
 .componente:nth-child(2) .componente-fundo-imagem::before {
   transition-delay: 0.1s;
-  background: no-repeat center/400% url("../multimedia/fotos/ProyectoQuality.png");
+  background: no-repeat center/200% url("../multimedia/fotos/ProyectoQuality.png");
+}
+.componente:nth-child(2).caixa-conteudo-ativo .componente-fundo-imagem:before {
+  background: no-repeat center/100% url("../multimedia/fotos/ProyectoQuality.png");
 }
 
 .conteudo-geral.caixa--componente-ativo .componente:nth-child(3):not(.caixa-conteudo-ativo) {
@@ -765,7 +786,10 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
 }
 .componente:nth-child(3) .componente-fundo-imagem::before {
   transition-delay: 0.2s;
-  background: no-repeat center/400% url("../multimedia/LandingQualityDestkopx.png");
+  background: no-repeat center/200% url("../multimedia/LandingQualityDestkopx.png");
+}
+.componente:nth-child(3).caixa-conteudo-ativo .componente-fundo-imagem:before {
+  background: no-repeat center/100% url("../multimedia/LandingQualityDestkopx.png");
 }
 
 .componente.caixa-conteudo-ativo {
@@ -783,7 +807,6 @@ main section:nth-child(3) .card .card-footer li a .bi-diagram-3:hover {
 .componente.caixa-conteudo-ativo .componente-fundo-imagem:before {
   transition-delay: 0.6s;
   transform: scale(1.1);
-  background: transparent;
 }
 
 aside {
