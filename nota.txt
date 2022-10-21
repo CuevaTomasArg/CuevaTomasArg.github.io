@@ -1,0 +1,8 @@
+refresh toke
+1//04k96k7umTKR6CgYIARAAGAQSNwF-L9IrEE6BNmR27_4LBkGZc8AZ0JE7bIH_hwKM7An4Ejqfyu8Hq-6dZbMLq2Fc7gVtGCeoCJE
+
+cliente ID
+199459798785-nockb0uc9tqcjus28t304dljblbkg5f9.apps.googleusercontent.com
+
+Secret cliente
+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
