@@ -57,6 +57,10 @@
             margin: 32px 128px 32px 32px;
             margin-right: 128px;
             margin-left: 32px;
+            @media only screen and (max-width:600px){
+                font-size: $f-tiny+0.2;
+                margin: 12px 0;
+            }
         }
         div,.card-footer{
             display: flex;
@@ -64,6 +68,10 @@
             align-items: flex-start;
             >ul{
                 margin: 24px 64px;
+            }
+            @media only screen and (max-width: 600px){
+                justify-content: flex-start;
+                margin: 0;
             }
         }
         >.list-lenguajes{
