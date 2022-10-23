@@ -25,6 +25,9 @@ $base-delay:0s;
         }
         &.caixa-conteudo-ativo .componente-fundo-imagem:before{
           background: no-repeat center/100% url(nth($images,$i));
+          @media only screen and (max-width:600px){
+            background: no-repeat center/200% url(nth($images,$i));
+          }
         }
     }
     $base-delay:$base-delay + 0.1s;

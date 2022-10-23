@@ -7,6 +7,9 @@
             color: $parrafos;
             display: inline-block;
             width: fit-content;
+            @media only screen and (max-width: 600px){
+                margin: 42px auto 0 12px;
+            }
             span{
                 display: inline-block;
                 padding: 6px;
@@ -47,9 +50,17 @@
             color:nth($colores, 2 );
             font-size: $f-regular;
             font-family: $font-H;
+            @media only screen and (max-width: 600px){
+                font-size: $f-small;
+                margin-top: 42px;
+            }
         }
         h3{
             margin-left: 32px;
+            @media only screen and (max-width: 600px){
+                text-align: center;
+                margin-left:0;
+            }
         }
         >p{
             font-size: $f-small - 0.2;
@@ -59,40 +70,32 @@
             margin-left: 32px;
             @media only screen and (max-width:600px){
                 font-size: $f-tiny+0.2;
-                margin: 12px 0;
-            }
-        }
-        div,.card-footer{
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            >ul{
-                margin: 24px 64px;
-            }
-            @media only screen and (max-width: 600px){
-                justify-content: flex-start;
-                margin: 0;
-            }
-        }
-        >.list-lenguajes{
-            margin-right: 32px;
-            ul{
-                li{
-                    margin-top: 8px;
-                    font-size:$f-tiny + 0.2 ;
-                }
-
+                margin: 42px 0;
             }
         }
         .card-footer{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            margin-left: 32px;
+            margin-top: 32px;
+            @media only screen and (max-width:600px){
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100%;
+                margin:24px 0;
+            }
             li{
                 width: 42px;
                 height: 42px;
                 margin: auto 8px;
+                @media only screen and (max-widht:600px) {
+                    margin: auto;
+                }
                 a{
                     font-size: 28px;
                     text-align: center;
-                    
                     span{
                         border-radius: 50%;
                         color: nth($colores,2) ;
@@ -118,6 +121,39 @@
                     }
                     
                 }
+            }
+        }
+        >.list-lenguajes{
+            margin-left: 32px;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: flex-start;
+            @media only screen and (max-width: 600px){
+                margin-left: 0;
+                justify-content: space-around;
+            }
+            ul{
+                &:first-child{
+                    margin-left:12px ;
+                    @media only screen and (max-width: 600px){
+                        margin-left: 0;
+                    }
+                }
+                &:nth-child(2){
+                    margin-left: 128px;
+                    @media only screen and (max-width: 600px){
+                        margin-left: 0;
+                    }
+                }
+                li{
+                    margin-top: 8px;
+                    font-size:$f-tiny + 0.2 ;
+                    @media only screen and (max-width: 600px){
+                        font-size: $f-tiny;
+                    }
+                }
+
             }
         }
     }

@@ -97,8 +97,14 @@ header{
                         height: 52px;
                         font-family: $font-H;
                         font-weight: 400;
-                        color: $borde-botones
-
+                        color: $borde-botones;
+                        transition: all .3s;
+                        &:hover{
+                            background-color: lighten($fondo-botones, 10%) ;
+                        }
+                        &:active{
+                            background-color: lighten($fondo-botones, 20%) ;
+                        }
                     }
                 }
             }
