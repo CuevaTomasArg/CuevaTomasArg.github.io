@@ -5,6 +5,7 @@ const { google } = require("googleapis")
 
 router.post("/send-mail",(req,res) =>{
     const {name,email,phone,message} = req.body
+    console.log(req.body)
     const contentHtml = `
     <h1>Formulario nodemailer</h1>
     <ul>
@@ -44,13 +45,15 @@ router.post("/send-mail",(req,res) =>{
                 html: contentHtml,
             }
             const result = await transporter.sendMail(mailOptions)
-            return result
+            return result;
         }
         catch(err){
             console.log(err)
         }
-        sendMail().then((result) => res.status(200).send("enviado")).catch((error) => console.log(error.message))
     }
+    sendMail()
+    .then((result) => res.status(200).send("enviado"))
+    .catch((error) => console.log(error.message))
 
 
 })
