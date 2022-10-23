@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
     <!-- FavIcon-->
     <link rel="shortcut icon" href="multimedia/logos/LogoTitle.svg" type="image/x-icon">
     <script defer src="js/main.js"></script>
-    <script src="../index.js"></script>
+    <!-- <script src="../routes/index.js"></script> -->
     <!-- <script defer src="js/email.js"></script> -->
 </head>
 <body>
@@ -300,15 +300,15 @@
         <form data-aos="fade-up" action="/send-mail" method="POST">
             <div>
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre">
+                <input type="text" name="name">
                 <label for="email">Email</label>
                 <input type="text" name="email"> 
-                <label for="whatsapp">Whatsapp</label>
-                <input type="text" name="whatsapp">
+                <label for="phone">Whatsapp</label>
+                <input type="text" name="phone">
             </div>
             <div>
                 <label for="consulta">Consulta</label>
-                <textarea name="consulta" id="consulta" cols="30" rows="10"></textarea>
+                <textarea name="message" id="consulta" cols="30" rows="10"></textarea>
             </div>
             <button type="submit">Enviar</button>
         </form>
