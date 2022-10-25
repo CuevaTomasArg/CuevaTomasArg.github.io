@@ -1039,7 +1039,16 @@ footer nav {
     margin-bottom: 24px;
   }
 }
-footer nav button {
+footer nav > a > button {
+  background-color: #21bd5c;
+}
+footer nav > a > button:hover {
+  background-color: #4be083;
+}
+footer nav > a > button:active {
+  background-color: #77e7a1;
+}
+footer nav > button {
   margin: 24px auto;
   font-size: 1rem;
   border: 1px solid #F1E7FF;
@@ -1052,27 +1061,22 @@ footer nav button {
   font-weight: 400;
   color: #F1E7FF;
   transition: all 0.5s;
+  background-color: #B53328;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-footer nav button:first-child {
-  background-color: #21bd5c;
-}
-footer nav button:first-child:hover {
-  background-color: #4be083;
-}
-footer nav button:last-child {
-  background-color: #B53328;
-}
-footer nav button:last-child:hover {
+footer nav > button:hover {
   background-color: #d4483c;
 }
-footer nav button img {
+footer nav > button:active {
+  background-color: #dd6f66;
+}
+footer nav > button img {
   height: 64px;
 }
-footer nav button span {
+footer nav > button span {
   display: inline-block;
   margin: 4px auto;
 }

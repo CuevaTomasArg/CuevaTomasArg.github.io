@@ -1,66 +1,9 @@
-// const { google } = require("googleapis");
-// const OAuth2 = google.auth.OAuth2;
-
-// const accountTransport = require("./account_transport.json");
-
-// const mail_rover = async (callback) => {
-//     const oauth2Client = new OAuth2(
-//         accountTransport.auth.clientId,
-//         accountTransport.auth.clientSecret,
-//         "https://developers.google.com/oauthplayground",
-//     );
-//     oauth2Client.setCredentials({
-//         refresh_token: accountTransport.auth.refreshToken,
-//         tls: {
-//             rejectUnauthorized: false
-//         }
-//     });
-//     oauth2Client.getAccessToken((err, token) => {
-//         if (err)
-//             return console.log(err);;
-//         accountTransport.auth.accessToken = token;
-//         callback(nodemailer.createTransport(accountTransport));
-//     });
-// };
-
-// function send(idAplicativo, calback) {
-//     var id = 0;
-//     try {
-//         var id = parseInt(idAplicativo);
-//     } catch (error) {
-//         console.log(`error parse idAplicativo feedback.js ${error}`)
-//     }
-//     mail_rover(function (emailTransporter) {
-//         switch (id) {
-//             case _ID_APP_1:
-//                 json = {
-//                     url: _SERVER + 'check/', mail: emailTransporter, app: 'CHECK', from: 'Check <check@planck.biz>',
-//                     to: 'CHECK <check@planck.biz>',
-//                     slogan: '😋 Comida exquisita, entregas simples. 🛵 Compra YA! 👇🏻',
-//                     body_bienvanida: 'Mensaje personalizado', head_bienvanida: 'En Check pide a tu local favorito, o chatea con un asesor por medicina, y te lo llevamos lo antes posible.',
-//                     bcc: 'Info <planck.biz@gmail.com>', head: head, footer: footer
-//                 };
-//                 return calback(json);
-//             default:
-//                 json = {
-//                     url: _SERVER + 'check/', mail: emailTransporter, app: 'CHECK', from: 'Check <check@planck.biz>',
-//                     to: 'CHECK <check@planck.biz>',
-//                     slogan: '😋 Comida exquisita, entregas simples. 🛵 Compra YA! 👇🏻',
-//                     body_bienvanida: 'Mensaje personalizado', head_bienvanida: 'En Check pide a tu local favorito, o chatea con un asesor por medicina, y te lo llevamos lo antes posible.',
-//                     bcc: 'Info <planck.biz@gmail.com>', head: head, footer: footer
-//                 };
-//                 return calback(json);
-//         }
-//     });
-// }
-
-
 var $conteudoGeral = document.querySelector(".conteudo-geral");
 var $conteudoEmArray = [].slice.call(document.querySelectorAll(".componente"));
 var $botoesDeFechar = [].slice.call(
   document.querySelectorAll(".componente-botao-fechar")
 );
-
+var open = false
 setTimeout(function () {
   $conteudoGeral.classList.remove("js-conteudo-geral");
 }, 200);
@@ -85,9 +28,12 @@ $botoesDeFechar.forEach(function ($btn) {
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openNav() {
-  var ul= document.getElementById("nav-list")
-  ul.style.width = "70%";
-  ul.className += "active-canvas";
+  if(! open ){
+    var ul= document.getElementById("nav-list")
+    ul.style.width = "70%";
+    ul.className += "active-canvas";
+    open = true
+  }
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
@@ -95,6 +41,15 @@ function closeNav() {
   var ul = document.getElementById("nav-list")
   ul.style.width = "0";
   ul.classList.remove("active-canvas")
+  open = false
 
 }
-console.log(screen.width, screen.height)
+
+function copiarAlPortapapeles(id_elemento) {
+  var aux = document.createElement("input");
+  aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
+  document.body.appendChild(aux);
+  aux.select();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+}
