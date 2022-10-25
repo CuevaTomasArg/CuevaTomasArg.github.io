@@ -1010,11 +1010,11 @@ footer .nombreSeccion span {
 }
 @media only screen and (max-width: 600px) {
   footer .nombreSeccion span {
-    margin-left: 8px;
+    margin-left: 16px;
   }
 }
 footer .nombreSeccion hr {
-  width: 60%;
+  width: 55%;
   margin: auto 32px;
   display: inline-block;
 }
@@ -1033,14 +1033,42 @@ footer nav {
   justify-content: center;
   align-items: center;
   margin-bottom: 32px;
+  margin-top: 52px;
 }
 @media only screen and (max-width: 600px) {
   footer nav {
     margin-bottom: 24px;
   }
 }
+footer nav > a {
+  all: unset;
+}
 footer nav > a > button {
+  margin: 24px auto;
+  font-size: 1rem;
+  border: 1px solid #F1E7FF;
+  border-radius: 6px;
+  width: 300px;
+  height: 64px;
+  padding: 0;
+  font-family: "Roboto Flex", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  color: #F1E7FF;
+  transition: all 0.5s;
   background-color: #21bd5c;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer nav > a > button span {
+  display: inline-block;
+  margin: 4px auto 4px 64px;
+}
+footer nav > a > button img {
+  height: 48px;
+  margin: auto 12px;
 }
 footer nav > a > button:hover {
   background-color: #4be083;
@@ -1054,7 +1082,7 @@ footer nav > button {
   border: 1px solid #F1E7FF;
   border-radius: 6px;
   width: 300px;
-  height: fit-content;
+  height: 64px;
   padding: 0;
   font-family: "Roboto Flex", sans-serif;
   text-align: center;
@@ -1074,11 +1102,24 @@ footer nav > button:active {
   background-color: #dd6f66;
 }
 footer nav > button img {
-  height: 64px;
+  height: 48px;
 }
 footer nav > button span {
   display: inline-block;
+  margin: 4px auto 4px 64px;
+}
+footer nav > span {
+  display: inline-block;
   margin: 4px auto;
+  color: transparent;
+  font-family: "Roboto Flex", sans-serif;
+  transition: all 0.8s ease-in-out;
+  transform: translateY(-54px);
+}
+footer nav > span.copiado {
+  transform: translateY(0px);
+  color: #F1E7FF;
+  transition: all 0.8s;
 }
 
 /*# sourceMappingURL=style.css.map */

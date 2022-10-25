@@ -1,0 +1,19 @@
+@mixin btn-contact($back){
+    margin:24px auto;
+    font-size: $f-tiny;
+    border: 1px solid $borde-botones;
+    border-radius: 6px;
+    width: 300px;
+    height: 64px;
+    padding: 0;
+    font-family: $font-H;
+    text-align: center;
+    font-weight: 400;
+    color: $borde-botones;
+    transition: all .5s;
+    background-color:$back;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}

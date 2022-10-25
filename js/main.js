@@ -4,9 +4,11 @@ var $botoesDeFechar = [].slice.call(
   document.querySelectorAll(".componente-botao-fechar")
 );
 var open = false
+var copy = false
 setTimeout(function () {
   $conteudoGeral.classList.remove("js-conteudo-geral");
 }, 200);
+
 
 $conteudoEmArray.forEach(function ($componente) {
   $componente.addEventListener("click", function () {
@@ -52,4 +54,10 @@ function copiarAlPortapapeles(id_elemento) {
   aux.select();
   document.execCommand("copy");
   document.body.removeChild(aux);
+  console.log("Se copio  el", aux);
+  if(! copy){
+     var confirm = document.getElementById("copiado")
+     confirm.className += "copiado"
+     copy = true
+   }
 }
