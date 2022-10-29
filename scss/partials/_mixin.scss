@@ -17,3 +17,21 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+@mixin btn-project($width,$height){
+    margin:24px auto;
+    font-size: $f-tiny;
+    border-radius: 6px;
+    width: $width;
+    height: $height;
+    padding: 0;
+    font-family: $font-H;
+    text-align: center;
+    font-weight: 400;
+    color: $borde-botones;
+    transition: all .5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
