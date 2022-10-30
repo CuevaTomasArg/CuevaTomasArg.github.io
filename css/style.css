@@ -49,11 +49,15 @@ hr {
   margin-top: 32px;
 }
 
+header {
+  max-width: 1485px;
+  text-align: center;
+}
 header nav {
   padding: 12px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   height: 64px;
 }
@@ -94,7 +98,7 @@ header nav img {
 }
 header nav ul {
   display: flex;
-  margin: auto 64px auto auto;
+  margin: auto 32px auto auto;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
@@ -302,6 +306,16 @@ main section:nth-child(2) p:last-child button {
   text-align: center;
   font-weight: 400;
   color: #F1E7FF;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+main section:nth-child(2) p:last-child button:hover {
+  background-color: #4f3c81;
+  color: white;
+}
+main section:nth-child(2) p:last-child button:active {
+  background-color: #654da3;
+  color: white;
 }
 main section:nth-child(3) .card > button:first-child {
   margin: 24px;
@@ -317,40 +331,15 @@ main section:nth-child(3) .card > button:first-child {
     margin: 42px auto 0 12px;
   }
 }
+@media only screen and (max-height: 750px) {
+  main section:nth-child(3) .card > button:first-child {
+    margin: 8px auto 0 12px;
+  }
+}
 main section:nth-child(3) .card > button:first-child span {
   display: inline-block;
   padding: 6px;
   font-size: 1.2rem;
-}
-main section:nth-child(3) .card .componente-boton-cerrar {
-  z-index: -1;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 60px;
-  height: 60px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0s 0.45s;
-  cursor: pointer;
-}
-main section:nth-child(3) .card .componente-boton-cerrar::before {
-  transform: rotate(45deg) translateX(100%);
-}
-main section:nth-child(3) .card .componente-boton-cerrar::after {
-  transform: rotate(-45deg) translateX(100%);
-}
-main section:nth-child(3) .card .componente-boton-cerrar::before, main section:nth-child(3) .card .componente-boton-cerrar::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 8px;
-  margin-top: -4px;
-  background: #F1E7FF;
-  opacity: 0;
-  transition: opacity 0s;
 }
 main section:nth-child(3) .card strong, main section:nth-child(3) .card h3 {
   color: #7563AA;
@@ -361,6 +350,12 @@ main section:nth-child(3) .card strong, main section:nth-child(3) .card h3 {
   main section:nth-child(3) .card strong, main section:nth-child(3) .card h3 {
     font-size: 1.6rem;
     margin-top: 42px;
+  }
+}
+@media only screen and (max-height: 750px) {
+  main section:nth-child(3) .card strong, main section:nth-child(3) .card h3 {
+    margin-top: 24px;
+    margin-bottom: 12px;
   }
 }
 main section:nth-child(3) .card h3 {
@@ -385,6 +380,11 @@ main section:nth-child(3) .card > p {
     margin: 42px 0;
   }
 }
+@media only screen and (max-height: 750px) {
+  main section:nth-child(3) .card > p {
+    margin: 12px 0;
+  }
+}
 main section:nth-child(3) .card .card-footer {
   display: flex;
   flex-direction: row;
@@ -397,6 +397,7 @@ main section:nth-child(3) .card .card-footer {
   main section:nth-child(3) .card .card-footer {
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     margin: 24px 0;
   }
@@ -425,23 +426,68 @@ main section:nth-child(3) .card .card-footer li a button {
   text-align: center;
   font-weight: 400;
   color: #F1E7FF;
-  transition: all 0.5s;
+  transition: all 0.25s;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  main section:nth-child(3) .card .card-footer li a button {
+    margin: 24px auto;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    width: 108px;
+    height: 48px;
+    padding: 0;
+    font-family: "Roboto Flex", sans-serif;
+    text-align: center;
+    font-weight: 400;
+    color: #F1E7FF;
+    transition: all 0.25s;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+  }
 }
 main section:nth-child(3) .card .card-footer li a button.github {
-  color: black;
+  color: rgb(29, 29, 29);
   background-color: rgb(223, 223, 223);
 }
+main section:nth-child(3) .card .card-footer li a button.github:hover {
+  color: rgb(223, 223, 223);
+  background-color: rgb(29, 29, 29);
+}
+main section:nth-child(3) .card .card-footer li a button.github:active {
+  color: #f9f9f9;
+  background-color: #373737;
+}
 main section:nth-child(3) .card .card-footer li a button.laptop {
-  color: #9D86DF;
+  color: #0B0217;
   background-color: #7563AA;
+}
+main section:nth-child(3) .card .card-footer li a button.laptop:hover {
+  color: #7563AA;
+  background-color: #0B0217;
+}
+main section:nth-child(3) .card .card-footer li a button.laptop:active {
+  color: #9284bc;
+  background-color: #210646;
 }
 main section:nth-child(3) .card .card-footer li a button.figma {
   color: #3d3e90;
   background-color: #FD3258;
+}
+main section:nth-child(3) .card .card-footer li a button.figma:hover {
+  color: #FD3258;
+  background-color: #3d3e90;
+}
+main section:nth-child(3) .card .card-footer li a button.figma:active {
+  color: #fd6581;
+  background-color: #4d4eb3;
 }
 main section:nth-child(3) .card .card-footer li a button span {
   display: inline-block;
@@ -453,6 +499,11 @@ main section:nth-child(3) .card .card-footer li a button span:not(.bi) {
 }
 main section:nth-child(3) .card .card-footer li a button .bi {
   font-size: 48px;
+}
+@media only screen and (max-width: 600px) {
+  main section:nth-child(3) .card .card-footer li a button .bi {
+    font-size: 36px;
+  }
 }
 main section:nth-child(3) .card > .list-lenguajes {
   margin-left: 32px;
@@ -506,6 +557,11 @@ main section:nth-child(3) .card > .list-lenguajes ul li {
   }
   .conteudo-geral.caixa-conteudo-ativo {
     overflow-x: hidden;
+  }
+}
+@media only screen and (max-height: 750px) {
+  .conteudo-geral {
+    height: 126vh;
   }
 }
 
@@ -708,6 +764,14 @@ main section:nth-child(3) .card > .list-lenguajes ul li {
   pointer-events: none;
   transition: all 0s 0.45s;
   cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .componente-botao-fechar {
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+  }
 }
 .componente-botao-fechar::after, .componente-botao-fechar::before {
   content: "";
@@ -1077,6 +1141,7 @@ footer nav > a > button {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
 }
 footer nav > a > button span {
   display: inline-block;
@@ -1110,6 +1175,7 @@ footer nav > button {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
 }
 footer nav > button:hover {
   background-color: #d4483c;

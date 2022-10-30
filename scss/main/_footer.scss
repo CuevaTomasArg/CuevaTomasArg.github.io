@@ -40,6 +40,7 @@ footer{
             all:unset;
             >button{
                 @include btn-contact(darken(#25D366, 5%)); 
+                cursor: pointer;
                 span{
                     display: inline-block;
                     margin: 4px auto 4px 64px;
@@ -58,6 +59,7 @@ footer{
         }
         >button{
             @include btn-contact(#B53328);
+            cursor: pointer;
             &:hover{
                 background-color: lighten(#B53328, 10%);
             }

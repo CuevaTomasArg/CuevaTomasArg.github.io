@@ -1,9 +1,11 @@
 header{
+    max-width: 1485px;
+    text-align: center;
     nav{
         padding: 12px;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
         height: 64px;
         .nav-button{
@@ -41,7 +43,7 @@ header{
         }
         ul{
             display:flex ;
-            margin:auto 64px auto auto;
+            margin:auto 32px auto auto;
             flex-direction: row;
             justify-content: space-evenly; 
             align-items: center;

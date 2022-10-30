@@ -10,6 +10,9 @@
         overflow-x: hidden;
       }
     }
+    @media only screen and (max-height:750px){
+      height: 126vh;
+    }
   }
   .componente-interno-geral {
     position: relative;
@@ -184,6 +187,12 @@
     pointer-events: none;
     transition: all 0s 0.45s;
     cursor: pointer;
+    @media only screen and (max-width:600px){
+      right: 10px;
+      top: 10px;
+      width: 30px;
+      height: 30px; 
+    }
     &::after,&::before{
       content: "";
       position: absolute;

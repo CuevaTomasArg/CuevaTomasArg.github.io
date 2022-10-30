@@ -114,6 +114,16 @@ main{
                 text-align: center;
                 font-weight: 400;
                 color: $borde-botones;
+                cursor: pointer;
+                transition: all .25s;
+                &:hover{
+                    background-color: lighten($fondo-botones, 10%);
+                    color:lighten($borde-botones, 10%);
+                }
+                &:active{
+                    background-color: lighten($fondo-botones, 20%);
+                    color:lighten($borde-botones, 20%);
+                }
             }
         }
     }
