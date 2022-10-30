@@ -11,7 +11,7 @@
             @media only screen and (max-width: 600px){
                 margin: 42px auto 0 12px;
             }
-            @media only screen and (max-height:750px){
+            @media only screen and (max-height:950px){
                 margin: 8px auto 0 12px;
             }
             span{
@@ -28,7 +28,7 @@
                 font-size: $f-small;
                 margin-top: 42px;
             }
-            @media only screen and (max-height:750px){
+            @media only screen and (max-height:950px){
                 margin-top: 24px;
                 margin-bottom: 12px;
             }
@@ -50,7 +50,7 @@
                 font-size: $f-tiny+0.2;
                 margin: 42px 0;
             }
-            @media only screen and (max-height:750px){
+            @media only screen and (max-height:950px){
                 margin: 12px 0;
             }
         }

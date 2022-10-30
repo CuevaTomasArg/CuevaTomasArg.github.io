@@ -331,7 +331,7 @@ main section:nth-child(3) .card > button:first-child {
     margin: 42px auto 0 12px;
   }
 }
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 950px) {
   main section:nth-child(3) .card > button:first-child {
     margin: 8px auto 0 12px;
   }
@@ -352,7 +352,7 @@ main section:nth-child(3) .card strong, main section:nth-child(3) .card h3 {
     margin-top: 42px;
   }
 }
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 950px) {
   main section:nth-child(3) .card strong, main section:nth-child(3) .card h3 {
     margin-top: 24px;
     margin-bottom: 12px;
@@ -380,7 +380,7 @@ main section:nth-child(3) .card > p {
     margin: 42px 0;
   }
 }
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 950px) {
   main section:nth-child(3) .card > p {
     margin: 12px 0;
   }
