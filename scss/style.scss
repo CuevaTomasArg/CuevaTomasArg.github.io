@@ -29,6 +29,7 @@ ul{
 hr{
     background-color: $parrafos
 }
+@import "main/loader";
 @import "main/consulta";
 @import "main/header";
 @import "main/main";
