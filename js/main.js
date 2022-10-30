@@ -5,6 +5,9 @@ var $botoesDeFechar = [].slice.call(
 );
 var open = false
 var copy = false
+var width = screen.width
+console.log("El ancho de la pantalla es: ",width)
+
 setTimeout(function () {
   $conteudoGeral.classList.remove("js-conteudo-geral");
 }, 200);
@@ -60,4 +63,12 @@ function copiarAlPortapapeles(id_elemento) {
      confirm.className += "copiado"
      copy = true
    }
+}
+
+if(width < 600){
+  var ul = document.getElementById("nav-list")
+  ul.setAttribute("style", "width:0;")
+}else{
+  var ul = document.getElementById("nav-list")
+  ul.setAttribute("style", "width:auto;")
 }
