@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #0B0217;
+  background-color: #E5EBF1;
 }
 
 a {
@@ -16,7 +16,7 @@ a {
 }
 
 p, label {
-  color: #F1E7FF;
+  color: #154a70;
   font-family: "Roboto", "Quicksand", sans-serif;
 }
 
@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  color: #9D86DF;
+  color: #A8C2DC;
 }
 
 ul {
@@ -33,13 +33,13 @@ ul {
 }
 
 hr {
-  background-color: #F1E7FF;
+  background-color: #154a70;
 }
 
 .loader-page {
   position: fixed;
   z-index: 25000;
-  background: #0B0217;
+  background: #E5EBF1;
   left: 0px;
   top: 0px;
   height: 100%;
@@ -66,7 +66,7 @@ hr {
 .loader-page::after {
   content: "";
   position: absolute;
-  border: 2px solid #F1E7FF;
+  border: 2px solid #1A5784;
   width: 256px;
   height: 256px;
   padding: 4px;
@@ -103,11 +103,32 @@ hr {
   margin-top: 32px;
 }
 
+.scroll-down header {
+  transition: all 0.3s;
+  transform: translateY(-128px);
+}
+
+.scroll-up header {
+  transition: all 0.3s;
+  transform: translateY(0);
+}
+
 header {
   max-width: 1485px;
   text-align: center;
+  background-color: #092E4C;
+  height: 128px;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+}
+@media only screen and (max-width: 992px) {
+  header {
+    width: 100%;
+  }
 }
 header nav {
+  background-color: #092E4C;
   padding: 12px;
   display: flex;
   flex-direction: row;
@@ -122,7 +143,7 @@ header nav .nav-button {
   align-items: center;
   border: none;
   background-color: transparent;
-  margin: 32px 28px 0px auto;
+  margin: 64px 28px 0px auto;
 }
 @media only screen and (min-width: 600px) {
   header nav .nav-button {
@@ -131,15 +152,15 @@ header nav .nav-button {
 }
 header nav .nav-button span {
   display: inline-block;
-  background-color: #F1E7FF;
+  background-color: #154a70;
   width: 32px;
   height: 4px;
   margin: 4px auto;
   border-radius: 8px;
 }
 header nav img {
-  height: 350%;
-  margin: 98px 32px 0px auto;
+  height: 275%;
+  margin: 64px 32px 0px auto;
   margin-left: 64px;
   margin-right: auto;
   z-index: 1;
@@ -151,6 +172,7 @@ header nav img {
   }
 }
 header nav ul {
+  background-color: #092E4C;
   display: flex;
   margin: auto 32px auto auto;
   flex-direction: row;
@@ -165,16 +187,16 @@ header nav ul {
     overflow-x: hidden;
     padding-top: 60px;
     width: 0;
-    z-index: 100;
+    z-index: 10000;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
     transition: 0.6s;
-    background-color: #1E0B38;
+    background-color: #092E4C;
   }
   header nav ul.active-canvas {
-    box-shadow: 200px 0px 0px rgba(13, 4, 43, 0.5294117647);
+    box-shadow: 200px 0px 0px rgba(4, 26, 43, 0.5294117647);
   }
 }
 header nav ul li {
@@ -202,27 +224,33 @@ header nav ul li.closebtn a {
 header nav ul li a {
   display: inline;
   font-family: "Roboto", "Quicksand", sans-serif;
-  color: #F1E7FF;
+  color: #A8C2DC;
   text-decoration: underline;
   transition: 0.5s;
 }
+header nav ul li a:hover {
+  color: #E5EBF1;
+}
+header nav ul li a:active {
+  color: white;
+}
 header nav ul li a button {
   font-size: 1rem;
-  background-color: #3A2C5E;
-  border: 1px solid #F1E7FF;
+  background-color: #A8C2DC;
+  border: 1px solid #1A5784;
   border-radius: 6px;
   width: 128px;
   height: 52px;
   font-family: "Roboto Flex", sans-serif;
   font-weight: 400;
-  color: #F1E7FF;
+  color: #1A5784;
   transition: all 0.3s;
 }
 header nav ul li a button:hover {
-  background-color: #4f3c81;
+  background-color: #ccdceb;
 }
 header nav ul li a button:active {
-  background-color: #654da3;
+  background-color: #f1f5f9;
 }
 
 #main {
@@ -230,19 +258,19 @@ header nav ul li a button:active {
 }
 
 main {
-  margin: 128px 0px;
+  margin: 156px 0px;
   width: 90%;
 }
 @media only screen and (max-width: 600px) {
   main {
     width: 100%;
-    margin: 48px 0px;
+    margin: 98px 0px;
   }
 }
 main .nombreSeccion {
   text-align: center;
   font-size: 1.6rem;
-  color: #F1E7FF;
+  color: #154a70;
 }
 @media only screen and (max-width: 600px) {
   main .nombreSeccion {
@@ -286,12 +314,12 @@ main section:first-child h1 {
   font-size: 3rem;
 }
 main section:first-child h2 {
-  color: #7563AA;
+  color: #1A5784;
   font-size: 2.5rem;
 }
 main section:first-child p {
   font-size: 1.6rem;
-  color: #eddfff;
+  color: #14466a;
 }
 main section:first-child p, main section:first-child h1, main section:first-child h2 {
   margin: 4px 0px;
@@ -323,7 +351,7 @@ main section:nth-child(2) p {
   font-size: 1.2rem;
   margin: 38px auto;
   padding-left: 126px;
-  color: #eddfff;
+  color: #14466a;
   line-height: 30px;
 }
 @media only screen and (max-width: 600px) {
@@ -336,7 +364,7 @@ main section:nth-child(2) ul {
   list-style-type: none;
 }
 main section:nth-child(2) ul li {
-  color: #eddfff;
+  color: #14466a;
 }
 main section:nth-child(2) ul li p i {
   margin: auto 8px;
@@ -345,13 +373,13 @@ main section:nth-child(2) ul li p i {
 main section:nth-child(2) p:last-child span {
   display: inline-block;
   margin: auto 32px 0px auto;
-  color: rgba(241, 231, 255, 0.25);
+  color: rgba(21, 74, 112, 0.25);
 }
 main section:nth-child(2) p:last-child button {
   margin-top: 128px;
   font-size: 1rem;
-  background-color: #3A2C5E;
-  border: 1px solid #F1E7FF;
+  background-color: #A8C2DC;
+  border: 1px solid #1A5784;
   border-radius: 6px;
   width: 70%;
   height: 52px;
@@ -359,24 +387,24 @@ main section:nth-child(2) p:last-child button {
   font-family: "Roboto Flex", sans-serif;
   text-align: center;
   font-weight: 400;
-  color: #F1E7FF;
+  color: #1A5784;
   cursor: pointer;
   transition: all 0.25s;
 }
 main section:nth-child(2) p:last-child button:hover {
-  background-color: #4f3c81;
-  color: white;
+  background-color: #ccdceb;
+  color: #2273af;
 }
 main section:nth-child(2) p:last-child button:active {
-  background-color: #654da3;
-  color: white;
+  background-color: #f1f5f9;
+  color: #2e8fd6;
 }
 main section:nth-child(3) .card > button:first-child {
   margin: 24px;
   background-color: transparent;
-  border: 2px solid #F1E7FF;
+  border: 2px solid #154a70;
   border-radius: 24px;
-  color: #F1E7FF;
+  color: #154a70;
   display: inline-block;
   width: fit-content;
 }
@@ -396,7 +424,7 @@ main section:nth-child(3) .card > button:first-child span {
   font-size: 1.2rem;
 }
 main section:nth-child(3) .card strong, main section:nth-child(3) .card h3 {
-  color: #7563AA;
+  color: #1A5784;
   font-size: 2rem;
   font-family: "Roboto Flex", sans-serif;
 }
@@ -423,7 +451,7 @@ main section:nth-child(3) .card h3 {
 }
 main section:nth-child(3) .card > p {
   font-size: 1.4rem;
-  color: #eddfff;
+  color: #14466a;
   margin: 32px 128px 32px 32px;
   margin-right: 128px;
   margin-left: 32px;
@@ -479,7 +507,7 @@ main section:nth-child(3) .card .card-footer li a button {
   font-family: "Roboto Flex", sans-serif;
   text-align: center;
   font-weight: 400;
-  color: #F1E7FF;
+  color: #1A5784;
   transition: all 0.25s;
   display: flex;
   flex-direction: row;
@@ -498,7 +526,7 @@ main section:nth-child(3) .card .card-footer li a button {
     font-family: "Roboto Flex", sans-serif;
     text-align: center;
     font-weight: 400;
-    color: #F1E7FF;
+    color: #1A5784;
     transition: all 0.25s;
     display: flex;
     flex-direction: row;
@@ -520,16 +548,16 @@ main section:nth-child(3) .card .card-footer li a button.github:active {
   background-color: #373737;
 }
 main section:nth-child(3) .card .card-footer li a button.laptop {
-  color: #0B0217;
-  background-color: #7563AA;
+  color: #E5EBF1;
+  background-color: #1A5784;
 }
 main section:nth-child(3) .card .card-footer li a button.laptop:hover {
-  color: #7563AA;
-  background-color: #0B0217;
+  color: #1A5784;
+  background-color: #E5EBF1;
 }
 main section:nth-child(3) .card .card-footer li a button.laptop:active {
-  color: #9284bc;
-  background-color: #210646;
+  color: #2273af;
+  background-color: white;
 }
 main section:nth-child(3) .card .card-footer li a button.figma {
   color: #3d3e90;
@@ -634,7 +662,7 @@ main section:nth-child(3) .card > .list-lenguajes ul li {
   top: 0;
   width: 44.2%;
   height: 100%;
-  background: #0B0217;
+  background: #E5EBF1;
   transition: transform 0.6s 0.7s, width 0.7s, opacity 0.6s 0.7s, z-index 0s 1.3s;
   will-change: transform, width, opacity;
 }
@@ -729,7 +757,7 @@ main section:nth-child(3) .card > .list-lenguajes ul li {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(28, 1, 51, 0.7);
+  background: rgba(126, 162, 197, 0.7450980392);
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -908,7 +936,7 @@ main section:nth-child(3) .card > .list-lenguajes ul li {
 }
 
 .componente-index-back {
-  color: #2f3840;
+  color: #455d72;
   opacity: 0;
   transition: opacity 0.25s 0.25s;
 }
@@ -1094,8 +1122,8 @@ aside nav ul li a {
 }
 aside nav ul li a span {
   border-radius: 50%;
-  color: #eddfff;
-  border: 3px solid #eddfff;
+  color: #14466a;
+  border: 3px solid #14466a;
   transition: all 0.5s;
   width: 100%;
   height: 100%;
@@ -1125,14 +1153,14 @@ aside nav ul li hr {
   height: 600px;
   margin: 30px 20px;
   display: inline-block;
-  color: #eddfff;
-  background-color: #eddfff;
+  color: #14466a;
+  background-color: #14466a;
 }
 
 footer .nombreSeccion {
   text-align: center;
   font-size: 1.6rem;
-  color: #F1E7FF;
+  color: #154a70;
 }
 @media only screen and (max-width: 600px) {
   footer .nombreSeccion {
@@ -1180,7 +1208,7 @@ footer nav > a {
 footer nav > a > button {
   margin: 24px auto;
   font-size: 1rem;
-  border: 1px solid #F1E7FF;
+  border: 1px solid #1A5784;
   border-radius: 6px;
   width: 300px;
   height: 64px;
@@ -1188,7 +1216,7 @@ footer nav > a > button {
   font-family: "Roboto Flex", sans-serif;
   text-align: center;
   font-weight: 400;
-  color: #F1E7FF;
+  color: #1A5784;
   transition: all 0.5s;
   background-color: #21bd5c;
   display: flex;
@@ -1214,7 +1242,7 @@ footer nav > a > button:active {
 footer nav > button {
   margin: 24px auto;
   font-size: 1rem;
-  border: 1px solid #F1E7FF;
+  border: 1px solid #1A5784;
   border-radius: 6px;
   width: 300px;
   height: 64px;
@@ -1222,7 +1250,7 @@ footer nav > button {
   font-family: "Roboto Flex", sans-serif;
   text-align: center;
   font-weight: 400;
-  color: #F1E7FF;
+  color: #1A5784;
   transition: all 0.5s;
   background-color: #B53328;
   display: flex;
@@ -1254,7 +1282,7 @@ footer nav > span {
 }
 footer nav > span.copiado {
   transform: translateY(0px);
-  color: #F1E7FF;
+  color: #154a70;
   transition: all 0.8s;
 }
 

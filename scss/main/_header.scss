@@ -1,7 +1,29 @@
+
+.scroll-down{
+    header{
+        transition: all .3s;
+        transform: translateY(-128px);
+    }
+}
+.scroll-up{
+    header{
+        transition: all .3s;
+        transform: translateY(0);
+    }
+}
 header{
     max-width: 1485px;
     text-align: center;
+    background-color: $fondo-offcanvas;
+    height: 128px;
+    position: fixed;
+    top:0;
+    z-index: 10000;
+    @media only screen and (max-width:992px){
+        width: 100%;
+    }
     nav{
+        background-color: $fondo-offcanvas;
         padding: 12px;
         display: flex;
         flex-direction: row;
@@ -15,7 +37,7 @@ header{
             align-items: center;
             border: none;
             background-color: transparent;
-            margin: 32px 28px 0px auto;
+            margin: 64px 28px 0px auto;
             @media only screen and (min-width:600px){
                 display: none;
             } 
@@ -31,8 +53,8 @@ header{
         }
     
         img{
-            height: 350%;
-            margin: 98px 32px 0px auto;
+            height: 275%;
+            margin: 64px 32px 0px auto;
             margin-left: 64px;
             margin-right: auto;
             z-index: 1;
@@ -42,6 +64,9 @@ header{
             }
         }
         ul{
+            // Aca hay un error, cuando se abre el offcanvas con el navbar
+            // Mientras esta con algun scroll, no se abre entero.
+            background-color: $fondo-offcanvas;
             display:flex ;
             margin:auto 32px auto auto;
             flex-direction: row;
@@ -54,15 +79,15 @@ header{
                 overflow-x: hidden;
                 padding-top: 60px;
                 width: 0;
-                z-index: 100;
+                z-index: 10000;
                 position: fixed;
                 top: 0;
                 left: 0;
-                height: 100%;
+                height: 100vh;
                 transition: .6s;
                 background-color: $fondo-offcanvas;
                 &.active-canvas{
-                    box-shadow: 200px 0px 0px #0d042b87;
+                    box-shadow: 200px 0px 0px $offcanvas-shadow;
                 }   
             }
             li{
@@ -87,9 +112,15 @@ header{
                 a{
                     display: inline;
                     font-family: $font-texto;
-                    color: $parrafos;
+                    color: $fondo-botones;
                     text-decoration:underline;
                     transition: .5s;
+                    &:hover{
+                        color:$fondo ;
+                    }
+                    &:active{
+                        color:lighten($fondo, 10%) ;
+                    }
                     button{
                         font-size: $f-tiny;
                         background-color: $fondo-botones;
