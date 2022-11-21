@@ -114,7 +114,7 @@ hr {
 }
 
 header {
-  max-width: 1485px;
+  width: 100%;
   text-align: center;
   background-color: #092E4C;
   height: 128px;
