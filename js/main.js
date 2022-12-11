@@ -6,7 +6,6 @@ var $botoesDeFechar = [].slice.call(
 var open = false
 var copy = false
 var width = screen.width
-console.log("El ancho de la pantalla es: ",width)
 
 setTimeout(function () {
   $conteudoGeral.classList.remove("js-conteudo-geral");
@@ -31,23 +30,34 @@ $botoesDeFechar.forEach(function ($btn) {
   });
 });
 
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openNav() {
   if(! open ){
     var ul= document.getElementById("nav-list")
     ul.style.width = "70%";
+    ul.style.position = "absolute";
+    ul.style.top = "0px";
+    ul.style.left = "0px";
     ul.className += "active-canvas";
     open = true
   }
 }
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 function closeNav() {
   var ul = document.getElementById("nav-list")
-  ul.style.width = "0";
   ul.classList.remove("active-canvas")
   open = false
+  if(width < 600){
+    ul.style.width = "0";
+  }
 
+}
+
+if(width < 600){
+  var ul = document.getElementById("nav-list")
+  ul.setAttribute("style", "width:0;")
+}else{
+  var ul = document.getElementById("nav-list")
+  ul.setAttribute("style", "width:auto;")
 }
 
 function copiarAlPortapapeles(id_elemento) {
@@ -65,13 +75,7 @@ function copiarAlPortapapeles(id_elemento) {
    }
 }
 
-if(width < 600){
-  var ul = document.getElementById("nav-list")
-  ul.setAttribute("style", "width:0;")
-}else{
-  var ul = document.getElementById("nav-list")
-  ul.setAttribute("style", "width:auto;")
-}
+
 
 $(window).on('load', function () {
   setTimeout(function () {
@@ -82,7 +86,6 @@ $(".loader-page").css({visibility:"hidden",opacity:"0"})
 
 const body = document.body;
 const nav = document.querySelector(".page-header nav");
-// const menu = document.querySelector(".page-header .menu");
 const scrollUp = "scroll-up";
 const scrollDown = "scroll-down";
 let lastScroll = 0;
