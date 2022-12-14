@@ -33,11 +33,13 @@ $botoesDeFechar.forEach(function ($btn) {
 function openNav() {
   if(! open ){
     var ul= document.getElementById("nav-list")
+    var header = document.getElementById("nav-bar")
     ul.style.width = "70%";
     ul.style.position = "absolute";
     ul.style.top = "0px";
     ul.style.left = "0px";
     ul.className += "active-canvas";
+    header.style.transform = "translateY(0)"
     open = true
   }
 }
@@ -46,6 +48,8 @@ function closeNav() {
   var ul = document.getElementById("nav-list")
   ul.classList.remove("active-canvas")
   open = false
+  var header = document.getElementById("nav-bar")
+  header.style.removeProperty("transform")
   if(width < 600){
     ul.style.width = "0";
   }
